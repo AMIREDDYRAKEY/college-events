@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
  
 import Nav from './Nav';
-import EventCards from './Eventcards';
+import Eventcards from './components/Eventcards'
 import Footer from './Footer';
  
 const Eventnav = () => {
@@ -16,7 +16,7 @@ const Eventnav = () => {
         </h1>
       </div>
       {/* cards */}
-       <div><EventCards/></div>
+       <div><Eventcards/></div>
         
     </div>
   )
