@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
  
 import Nav from './Nav';
-import EventCards from './EventCards';
+import EventCards from './Eventcards';
 import Footer from './Footer';
  
 const Eventnav = () => {

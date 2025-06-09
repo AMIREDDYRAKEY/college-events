@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 import Homeslides from '../components/Homeslides'
 import HomeHero from '../components/HomeHero';
 import Eventnav from '../components/Eventnav';
-import EventCards from '../components/EventCards';
+import EventCards from '../components/Eventcards';
  import Footer from '../components/Footer';
 
 const Home = () => {
