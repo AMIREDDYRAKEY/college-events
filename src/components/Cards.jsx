@@ -69,7 +69,7 @@ const Cards = ({ limit }) => {
             <div className='flex mt-[20px] lg:ml-[15px] ml-[20px] lg:gap-4 gap-5 font-semibold text-sm text-white'>
               <button
                 className='border border-[#8162c0] h-[30px] w-[100px] rounded-lg'
-                 onClick={()=>navigate('/Events/:${event.id}') }
+                 onClick={()=>setdetails(!details) }
               >
                 Viewdetails
               </button>
