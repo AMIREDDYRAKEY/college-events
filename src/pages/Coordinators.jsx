@@ -19,13 +19,13 @@ const Coordinators = () => {
   ];
 
   return (
-    <div className="min-h-screen pb-[50px] lg:pt-[100px] pt-[60px] bg-gradient-to-br from-[#0a001f] via-[#5f1d7a] to-[#ff2ca3]">
+    <div className="min-h-screen pb-[50px] lg:pt-[100px] pt-[60px] bg-gradient-to-br from-[#27164d] via-[#581572] to-[#4e032e]">
       <div className="">
         <Nav />
       </div>
 
       <div className="flex flex-col gap-8 items-center justify-center mt-[40px] px-4">
-        <h1 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#ec38bc] via-[#7303c0] to-[#2b86c5]">
+        <h1 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#c43b9f] via-[#8f1ddb] to-[#aa0a68]">
           Our Faculty Coordinators
         </h1>
 

@@ -10,7 +10,8 @@ const Nav = () => {
   }
 
   return (
-    <div className="w-full h-[80px] fixed top-0 z-[40] backdrop-blur-lg saturate-200 bg-white/30">
+<div className="w-full h-[80px] fixed top-0 z-[40]  bg-[#621f80]">
+
       <div className='flex justify-evenly items-center h-full px-4'>
         <div>
           <h3 className='text-white  font-bold text-lg'>Logo</h3>

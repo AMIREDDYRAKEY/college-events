@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import img from '../assets/Brain.jpg';
 import { IoCloseSharp } from "react-icons/io5";
+import { useParams } from 'react-router-dom';
 const Individualevent = ({ details, setdetails }) => {
   const [activetab, setactivetab] = useState('schedule');
-
+  const { userId } = useParams();
   const schedule = [
     {
       Date: '23/12/24',
@@ -29,7 +30,7 @@ const Individualevent = ({ details, setdetails }) => {
   ];
 
   return (
-    <div className="flex flex-col lg:justify-center z-100 lg:items-center">
+    <div className="flex flex-col lg:justify-center z-100 lg:items-center" userId='1'>
       <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px]  bg-[#131e4e] rounded-lg shadow-md text-white">
  
         {/* Image */}
