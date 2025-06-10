@@ -6,8 +6,7 @@ import Coordinators from './pages/Coordinators';
 import About from './pages/About';
 import Contact from './pages/Contact'
 import Login from './pages/Login';
-import UserLogin from './components/UserLogin';
-
+import Userlogin from './components/userlogin';
 const App = () => {
   return (
     <div>
@@ -19,7 +18,7 @@ const App = () => {
           <Route path="/Coordinators" element={<Coordinators />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/UserLogin" element={<UserLogin />} />
+           <Route path="/Userlogin" element={<Userlogin />} />
           
         </Routes>
       </BrowserRouter>

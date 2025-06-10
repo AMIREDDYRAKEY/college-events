@@ -7,9 +7,10 @@ const scheduleData = {
   "23/12/24": [
     {
       title: "Event Inauguration",
-      desc: "Grabbing the consumer’s attention isn’t enough you have to keep that attention for seconds.",
+      desc: "Grabbing the consumers attention isnt enough you have to keep that attention for seconds.",
       time: "9.00 am - 10.00 am",
-      img: img
+      img: img,
+      id:'1'
     },
      
   ],
@@ -18,7 +19,8 @@ const scheduleData = {
       title: "Marketing Workshop",
       desc: "Learn how to build and market products for scale.",
       time: "10.00 am - 12.00 pm",
-      img: img2
+      img: img2,
+      id:'2'
     }
   ],
   "14/02/25": [
@@ -26,7 +28,8 @@ const scheduleData = {
       title: "Intro to Business Innovation",
       desc: "Strategies for fostering innovation in business.",
       time: "9.00 am - 10.30 am",
-      img: img3
+      img: img3,
+      id:'3'
     }
   ]
 };

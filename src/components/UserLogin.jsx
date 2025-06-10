@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-const UserLogin = () => {
+const Userlogin = () => {
   const [sub, setsub] = useState('')
   const [open,setopen]=useState('')
   const [username,setusername]=useState('')
@@ -84,14 +84,14 @@ const UserLogin = () => {
                 {
                   open && (
                     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                    bg-[#34244c] text-white lg:px-8 lg:py-[80px] rounded-xl shadow-lg z-50">
+                    bg-[#34244c] text-white px-8  py-[80px] rounded-xl shadow-lg z-50">
                        <button
-                                        className="absolute top-2 right-3 text-gray-500 hover:text-red-500 lg:text-xl text-md"
+                                        className="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-xl"
                                       onClick={()=>setopen(false)}
                                       >
                                         <IoCloseSharp />
                                       </button>
-                      <p className="text-lg font-semibold">Login successfully</p>
+                      <p className="lg:text-lg text-[10px] font-semibold">Login successfully</p>
                     </div>
                   )
                 }
@@ -105,4 +105,4 @@ const UserLogin = () => {
   )
 }
 
-export default UserLogin
+export default Userlogin

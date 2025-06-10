@@ -9,6 +9,7 @@ const Individualevent = ({ details, setdetails }) => {
       Date: '23/12/24',
       Time: '10:00 AM',
       Venue: 'CSE E-Classroom',
+      
     },
   ];
 
@@ -17,7 +18,7 @@ const Individualevent = ({ details, setdetails }) => {
       rule1: 'Open to all registered students.',
       rule2: 'Individual participation or teams of 2 (based on your event format).',
       rule3: 'The judges decision will be final and binding.'
-
+    
     },
   ];
   const results = [

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Nav from '../components/Nav';
 import { useNavigate } from 'react-router-dom';
-import Userlogin from '../components/UserLogin';
+ import Userlogin from '../components/userlogin';
 import '../components/style.css'
 import { IoCloseSharp } from "react-icons/io5";
 const Login = () => {
@@ -97,7 +97,7 @@ const Login = () => {
               <button className="text-sm text-white opacity-80 font-semibold">Already Have An Account?</button>
               <button
                 className="text-md text-blue-500 font-semibold"
-                onClick={() => navigate('/UserLogin')} // 👈 make sure route is lowercase
+                onClick={() => navigate('/Userlogin')} // 👈 make sure route is lowercase
               >
 
                 Login
