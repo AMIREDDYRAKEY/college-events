@@ -31,7 +31,7 @@ const Individualevent = ({ details, setdetails }) => {
     <div className="flex flex-col lg:justify-center z-100 lg:items-center">
       <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px]  bg-[#131e4e] rounded-lg shadow-md text-white">
         <button
-          className="absolute lg:pl-[520px] pl-[190px]   mt-[-15px] lg:mt-[-1px] text-white font-bold text-3xl"
+          className="absolute lg:pl-[520px] pl-[190px]   mt-[-15px] lg:mt-[-1px] text-white font-bold text-xl"
           onClick={() => setdetails(!details)}
 
         >
@@ -43,7 +43,7 @@ const Individualevent = ({ details, setdetails }) => {
           <img
             src={img}
             alt="Event"
-            className="lg:w-[200px] w-[200px] h-[150px] lg:mt-0 mt-[20px] object-cover rounded-md"
+            className="lg:w-[200px] w-[300px] h-[150px] lg:mt-0 mt-[20px] object-cover rounded-md"
           />
         </div>
 
