@@ -28,7 +28,7 @@ const Individualevent = ({ details, setdetails }) => {
   ];
 
   return (
-    <div className="flex flex-col lg:justify-center lg:items-center">
+    <div className="flex flex-col lg:justify-center z-100 lg:items-center">
       <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px]  bg-[#131e4e] rounded-lg shadow-md text-white">
         <button
           className="absolute lg:pl-[520px] pl-[190px]   mt-[-15px] lg:mt-[-1px] text-white font-bold text-3xl"
@@ -49,20 +49,20 @@ const Individualevent = ({ details, setdetails }) => {
 
         {/* Buttons and Content */}
         <div className="flex flex-col gap-3 justify-start w-full">
-          <div className="flex lg:gap-4 gap-2">
+          <div className="lg:flex lg:flex-row   grid grid-cols-2 lg:gap-3 gap-3">
             <button
               onClick={() => setactivetab('schedule')}
-              className="h-[30px] lg:w-[80px] w-[110px] bg-blue-600 rounded-md"
+              className="h-[30px] lg:w-[80px]  bg-blue-600 rounded-md"
             >
               Schedule
             </button>
             <button
               onClick={() => setactivetab('rules')}
-              className="h-[30px] lg:w-[80px] w-[100px] bg-blue-600 rounded-md"
+              className="h-[30px] lg:w-[80px]  bg-blue-600 rounded-md"
             >
               Rules
             </button>
-            <button className="h-[30px] lg:w-[80px] w-[100px] bg-blue-600 rounded-md"
+            <button className="h-[30px] lg:w-[80px]  bg-blue-600 rounded-md"
               onClick={() => setactivetab('results')}
             >
               Results
