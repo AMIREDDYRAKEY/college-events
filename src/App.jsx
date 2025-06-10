@@ -6,8 +6,7 @@ import Coordinators from './pages/Coordinators';
 import About from './pages/About';
 import Contact from './pages/Contact'
 import Login from './pages/Login';
-import Userlogin from './components/Userlogin ';
-import Individualevent from './components/Individualevent';
+import Userlogin from './components/Userlogin';
 const App = () => {
   return (
     <div>
@@ -20,7 +19,7 @@ const App = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
            <Route path="/Userlogin" element={<Userlogin />} />
-          <Route path="/Individualevent/:eventId" element={<Individualevent/>}/>
+           
         </Routes>
       </BrowserRouter>
     </div>

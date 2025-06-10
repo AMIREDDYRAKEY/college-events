@@ -1,9 +1,7 @@
 import React from 'react';
-import Eventnav from '../components/Eventnav';
- 
-
+import Eventnav from '../components/Eventnav'; 
 const Events = () => {
-  return (
+   return (
     <div>
         <div ><Eventnav/></div>
         

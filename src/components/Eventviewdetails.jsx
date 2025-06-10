@@ -10,7 +10,7 @@ const scheduleData = {
       desc: "Grabbing the consumers attention isnt enough you have to keep that attention for seconds.",
       time: "9.00 am - 10.00 am",
       img: img,
-      id:'1'
+      
     },
      
   ],
@@ -20,7 +20,7 @@ const scheduleData = {
       desc: "Learn how to build and market products for scale.",
       time: "10.00 am - 12.00 pm",
       img: img2,
-      id:'2'
+       
     }
   ],
   "14/02/25": [
@@ -29,7 +29,7 @@ const scheduleData = {
       desc: "Strategies for fostering innovation in business.",
       time: "9.00 am - 10.30 am",
       img: img3,
-      id:'3'
+         
     }
   ]
 };
@@ -70,7 +70,7 @@ const Eventviewdetails = () => {
               <h2 className="lg:text-3xl text-xl text-black font-bold ">{event.title}</h2>
               <p className="text-gray-700 text-xl  ">{event.desc}</p>
               <span className="text-purple-600 font-semibold text-md">{event.time}</span>
-            </div>
+             </div>
           </div>
         ))}
       </div>
