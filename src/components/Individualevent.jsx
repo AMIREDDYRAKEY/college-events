@@ -43,7 +43,7 @@ const Individualevent = ({ details, setdetails }) => {
           <img
             src={img}
             alt="Event"
-            className="w-[200px] h-[150px] lg:mt-0 mt-[20px] object-cover rounded-md"
+            className="lg:w-[200px] w-[200px] h-[150px] lg:mt-0 mt-[20px] object-cover rounded-md"
           />
         </div>
 
