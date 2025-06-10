@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Nav from '../components/Nav';
 import { useNavigate } from 'react-router-dom';
- import Userlogin from '../components/userlogin';
+import Userlogin from './components/Userlogin
 import '../components/style.css'
 import { IoCloseSharp } from "react-icons/io5";
 const Login = () => {
