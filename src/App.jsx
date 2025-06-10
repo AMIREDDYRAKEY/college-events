@@ -8,6 +8,7 @@ import Coordinators from './pages/Coordinators';
  import Login from './pages/Login';
 import UserLogin from './components/UserLogin';
  import Individualevent from './components/Individualevent';
+  
  
 const App = () => {
   return (

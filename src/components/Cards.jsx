@@ -7,7 +7,7 @@ import img5 from '../assets/thoughts.jpg';
 import { useNavigate } from 'react-router-dom';
 import Register from './Register';
 import Individualevent from './Individualevent';
-const EventCards = ({ limit }) => {
+const Cards = ({ limit }) => {
   const [isopen, setisopen] = useState(false);
   const navigate = useNavigate();
   
@@ -98,4 +98,4 @@ const EventCards = ({ limit }) => {
   );
 };
 
-export default EventCards;
+export default Cards;
