@@ -9,6 +9,7 @@ import Register from './Register';
 import Individualevent from './Individualevent';
 const Cards = ({ limit }) => {
   const [isopen, setisopen] = useState(false);
+  const [details,setdetails] = useState(false)
   const navigate = useNavigate();
   
    
@@ -70,7 +71,7 @@ const Cards = ({ limit }) => {
             <div className='flex mt-[20px] ml-[15px] gap-4 font-semibold text-sm text-white'>
               <button
                 className='border border-[#8162c0] h-[30px] w-[100px] rounded-lg'
-                 onClick={()=>navigate('/Individualevent')}
+                 onClick={()=>setdetails(!details) }
               >
                 Viewdetails
               </button>
@@ -94,6 +95,17 @@ const Cards = ({ limit }) => {
           </div>
         </div>
       )}
+      {/* viewdetails */}
+      {
+        details &&(
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+          <div className=" rounded-lg p-6 relative z-50 w-[90%] max-w-md">
+             
+             <Individualevent details={details} setdetails={setdetails}/>
+          </div>
+        </div>
+        )
+      }
     </div>
   );
 };
