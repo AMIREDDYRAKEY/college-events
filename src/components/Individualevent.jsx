@@ -111,7 +111,7 @@ const Individualevent = ({ details, setdetails }) => {
             ))}
 
         </div>
-      </div>
+      </div>  
     </div>
   );
 };

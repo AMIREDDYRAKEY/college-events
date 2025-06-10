@@ -36,9 +36,9 @@ const Footer = () => {
         <div className='flex flex-col gap-2 lg:ml-0 ml-[-30px]'>
           <h3 className='text-2xl font-bold'>Contact</h3>
           <p className='text-gray-500 font-semibold'>csetechExplore@gmail.com</p>
-          <div>
+          {/* <div>
             <img src={img} alt="Scan Me" className='h-[100px] w-[100px]' />
-          </div>
+          </div> */}
         </div>
 
       </div>

@@ -57,7 +57,7 @@ const UserLogin = () => {
     <div>
       <div className="min-h-screen bg-gradient-to-br from-[#0b132b] via-[#2a1b3d] to-[#3a506b]">
         <div className="flex items-center justify-center  ">
-          <div className=" pb-[20px] w-[300px] mt-[12%] rounded-lg shadow-lg  shadow-[#4b3c63]  bg-[#34244c]">
+          <div className=" pb-[20px] w-[300px] lg:mt-[12%] mt-[200px] rounded-lg shadow-lg  shadow-[#4b3c63]  bg-[#34244c]">
             {/* user */}
             <div className="flex justify-center mt-[-40px]">
               <div className="flex items-center justify-center bg-[#403f68] h-[80px] w-[80px] rounded-full">

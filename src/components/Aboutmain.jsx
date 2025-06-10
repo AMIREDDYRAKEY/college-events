@@ -21,7 +21,7 @@ const Aboutmain = () => {
             </div>
             {/* logos */}
             <div className='lg:mt-[80px] mt-[40px] lg:flex lg:flex-row flex flex-col gap-10 justify-around w-full'>
-                <div className='flex flex-col  items-start lg:ml-[80px] lg:w-1/3'>
+                <div className='flex flex-col  items-start lg:ml-[80px] ml-[10px] lg:w-1/3'>
                 <div className=' lg:ml-[90px] ml-[70px]'>
                     <img src={naclogo} alt=""  className='lg:h-[150px] lg:w-[200px] w-[180px] h-[130px]  '/>
                 </div>
