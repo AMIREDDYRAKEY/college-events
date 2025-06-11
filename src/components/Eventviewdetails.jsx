@@ -6,8 +6,8 @@ import img4 from '../assets/thoughts.jpg'
 const scheduleData = {
   "23/12/24": [
     {
-      title: "Event Inauguration",
-      desc: "Grabbing the consumers attention isnt enough you have to keep that attention for seconds.",
+      title: "Brain Busters",
+      desc: "Brain Busters is a high-intensity quiz-based competition that tests your knowledge, logic, and quick thinking. Designed to challenge even the sharpest minds, this event features multiple rounds that span across topics like science, tech, puzzles, general knowledge, and current affairs.",
       time: "9.00 am - 10.00 am",
       img: img,
       
@@ -16,8 +16,8 @@ const scheduleData = {
   ],
   "07/01/2025": [
     {
-      title: "Marketing Workshop",
-      desc: "Learn how to build and market products for scale.",
+      title: "Bug Hunting",
+      desc: "Bug Hunting is a thrilling competition designed for coders and developers who love debugging and problem-solving. Participants will be given pre-written code snippets embedded with logical or syntactical bugs. The task is to analyze, detect, and fix these issues within a set timeframe",
       time: "10.00 am - 12.00 pm",
       img: img2,
        
@@ -25,8 +25,8 @@ const scheduleData = {
   ],
   "14/02/25": [
     {
-      title: "Intro to Business Innovation",
-      desc: "Strategies for fostering innovation in business.",
+      title: "Techno Jam",
+      desc: "Techno Jam is a thrilling on-the-spot speaking challenge where participants must speak fluently and confidently about random technical and general topics without hesitation or repetition. It’s the ultimate test of presence of mind, communication skills, and tech vocabulary under pressure.",
       time: "9.00 am - 10.30 am",
       img: img3,
          
@@ -68,7 +68,7 @@ const Eventviewdetails = () => {
             <img src={event.img} alt={event.title} className="lg:w-[180px] h-[150px] rounded-md object-cover" />
             <div className='flex flex-col items-start justify-start mb-[0px]'>
               <h2 className="lg:text-3xl text-xl text-black font-bold ">{event.title}</h2>
-              <p className="text-gray-700 text-xl  ">{event.desc}</p>
+              <p className="text-gray-700 text-md  ">{event.desc}</p>
               <span className="text-purple-600 font-semibold text-md">{event.time}</span>
              </div>
           </div>

@@ -74,7 +74,7 @@ const Cards = ({ limit }) => {
                 Viewdetails
               </button>
               <button
-                className='border border-[#7f46f0] h-[30px] w-[100px] bg-gradient-to-br from-pink-500 via-orange-300 to-green-400 rounded-lg'
+                className='border border-[#7f46f0] h-[30px] w-[100px] bg-blue-700 rounded-lg'
                 onClick={() => setisopen(!isopen)}
               >
                 Register

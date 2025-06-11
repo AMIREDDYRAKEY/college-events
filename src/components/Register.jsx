@@ -1,34 +1,64 @@
 import React, { useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-const Register = ({isopen,setisopen}) => {
+const Register = ({ isopen, setisopen }) => {
     const [sub, setsub] = useState('')
+    const [Name, setName] = useState('')
+    const [Idno, setIdno] = useState('')
+    const [errors, seterrors] = useState({
+        Name: '',
+        Idno: ''
+    })
+    const handlesubmit = () => {
+        let isvalid = true
+        if (Name === '') {
+            seterrors((errors) => ({ ...errors, Name: 'Name is required' }))
+        }
+        else {
+            seterrors((errors) => ({ ...errors, Name: '' }))
+        }
+        // Idno
+        if (Idno === '') {
+            seterrors((errors) => ({ ...errors, Idno: 'Idno is required' }))
+        }
+        else {
+            seterrors((errors) => ({ ...errors, Idno: '' }))
+        }
+    }
     const submit = () => {
         setsub(true)
     }
     return (
-        <div>
+        <div className='z-[50px'>
             <div className="flex items-center justify-center top-0 right-0 left-0   ">
                 <div className="flex items-center justify-center">
-                    <div className="h-[270px] w-[300px] mt-[12%] rounded-lg shadow-lg p-4 shadow-[#4b3c63] bg-[#34244c]">
-                       <div className='flex flex-row-reverse justify-center '>  
-                        <h3 className='text-3xl text-center font-semibold '>Register</h3>
-                        <button
-                            className="absolute  ml-[270px] mt-[-17px] text-white font-bold text-2xl"
-                            onClick={()=>setisopen(!isopen)}
-                            
-                        >
-                           <IoCloseSharp/>
-                            
-                        </button>
+                    <div className="  w-[300px] mt-[12%] rounded-lg shadow-lg p-4 shadow-[#4b3c63] bg-[#34244c]">
+                        <div className='flex flex-row-reverse justify-center '>
+                            <h3 className='text-3xl text-center font-semibold '>Register</h3>
+                            <button
+                                className="absolute  ml-[270px] mt-[-17px] text-white font-bold text-2xl"
+                                onClick={() => setisopen(!isopen)}
+
+                            >
+                                <IoCloseSharp />
+
+                            </button>
                         </div>
                         <div className="flex flex-col gap-7 items-center justify-center">
-                            <div className="flex flex-col gap-5 items-center justify-center mt-[20px]">
-                                <input type="text" placeholder="Enter Your Name" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" />
-                                <input type="text" placeholder="ID NO" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" />
+                            <div className="flex flex-col gap-3 items-center justify-center mt-[20px]">
+                                {/* Username */}
+                                <div className='flex flex-col'>
+                                    <input type="text" placeholder="Enter Your Name" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Name} onChange={(e) => setName(e.target.value)} />
+                                     <span className='text-red-600 font-semibold ml-[10px]'>{errors.Name}</span>
+                                </div>
+                                {/* Idno */}
+                                <div className='flex flex-col'>
+                                    <input type="text" placeholder="Id No" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Idno} onChange={(e) => setIdno(e.target.value)} />
+                                    <span className='text-red-600 font-semibold ml-[10px]'>{errors.Idno}</span>
+                                </div>
                             </div>
                             <div className="mt-[-10px] flex flex-col gap-2 items-center justify-center">
-                                <button className="h-[40px] w-[220px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={() => setsub(!sub)}>Submit</button>
+                                <button className="h-[40px] w-[220px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>
                                 {
                                     sub && (
                                         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 

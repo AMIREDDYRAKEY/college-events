@@ -11,17 +11,17 @@ const Nav = () => {
   }
 
   return (
-<div className="w-full h-[80px] fixed top-0 z-[40]  bg-[#621f80]">
+<div className="w-full  h-[80px] fixed top-0 z-[40]    bg-gradient-to-br from-[#35215f] to via-[#4d026b] ">
 
       <div className='flex justify-evenly items-center h-full px-4'>
         <div>
           <div><img src={img} alt="" className='w-[100px] h-[100px]  rounded-full' /></div>
         </div>
         
-        <div className='lg:flex gap-8 text-pink-100 hidden font-medium text-sm'>
+        <div className='lg:flex gap-8 text-pink-100 hidden font-semibold   text-sm'>
           <button
             onClick={() => navigate('/')}
-            className='hover:text-white transition duration-200'
+            className='hover:text-blue-400 transition duration-200'
           >
             Home
           </button>
@@ -52,7 +52,7 @@ const Nav = () => {
         </div>
         <div>
           <button
-            className='text-white bg-pink-500 hover:bg-pink-600 px-4 py-1 rounded-md text-sm transition duration-200'
+            className='text-white font-semibold bg-pink-500 hover:bg-pink-800 px-4 py-1 rounded-md text-sm transition duration-200'
             onClick={() => navigate('/Login')}
           >
             Login

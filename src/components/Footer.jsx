@@ -3,7 +3,7 @@ import img from '../assets/aitslogo.png';
 
 const Footer = () => {
   return (
-    <div className='mt-[60px]  flex items-center justify-center'>
+    <div className='mt-[60px] z-0 flex items-center justify-center'>
       <div className='shadow-xl backdrop-blur-md lg:gap-0 gap-5  lg:p-0 p-4 lg:w-[95%]   lg:ml-[30px] ml-[35px] bg-white/10 lg:flex lg:flex-row flex flex-col rounded-2xl justify-between lg:items-center lg:h-[300px] px-[50px] mx-[50px] lg:px-[70px]'>
       
         {/* Information */}
