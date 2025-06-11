@@ -7,7 +7,6 @@ import img5 from '../assets/thoughts.jpg';
 import { useNavigate } from 'react-router-dom';
 import Register from './Register';
 import Individualevent from './Individualevent';
-import Footer from './footer';
 const Cards = ({ limit }) => {
   const [isopen, setisopen] = useState(false);
   const [details,setdetails] = useState(false)
@@ -112,8 +111,7 @@ const Cards = ({ limit }) => {
         </div>
         )
       }
-      <div className=' w-full'><Footer/></div>
-    </div>
+     </div>
   );
 };
 

@@ -3,7 +3,7 @@ import img from '../assets/aitslogo.png';
 
 const Footer = () => {
   return (
-    <footer className="mt-[60px] flex items-center justify-center z-0">
+    <div className="mt-[60px] flex items-center justify-center z-0">
       <div className="backdrop-blur-md bg-white/10 shadow-xl rounded-2xl p-6 pb-8 w-[95%] md:w-[93%] flex flex-col md:p-10 lg:flex-row justify-between gap-8 lg:items-center">
 
         {/* Info Section */}
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
       </div>
-    </footer>
+    </div>
   );
 };
 

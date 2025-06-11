@@ -2,7 +2,7 @@ import React, { useState } from 'react'
  
 import Nav from './Nav';
  import Cards from './Cards'
-import Footer from './Footer';
+import Footer from './Footermain';
  
 const Eventnav = () => {
   
@@ -17,6 +17,7 @@ const Eventnav = () => {
       </div>
       {/* cards */}
        <div><Cards/></div>
+        <div className=' w-full'><Footer/></div>
         
     </div>
   )
