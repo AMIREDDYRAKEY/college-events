@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/logobg.png';
+import img from '../assets/aitslogo.png';
 
 const HomeHero = () => {
   return (
@@ -10,7 +10,7 @@ const HomeHero = () => {
         <img
           src={img}
           alt="TechExplore 2024 Logo"
-          className="h-[300px] w-[300px] md:h-[400px] md:w-[400px] rounded-full object-cover  "
+          className="h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full object-cover  "
         />
       </div>
 

@@ -4,7 +4,7 @@ import Homeslides from '../components/Homeslides';
 import HomeHero from '../components/HomeHero';
 import Eventnav from '../components/Eventnav';
 import Cards from '../components/Cards';
-import Footer from '../components/Footer';
+ import Footer from '../components/Footer';
 
 const Home = () => {
   return (

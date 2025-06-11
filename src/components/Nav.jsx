@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { FiMenu } from "react-icons/fi";
 import Sidenav from './Sidenav';
+import img from '../assets/aitslogo.png'
 const Nav = () => {
   const navigate = useNavigate();
   const [sidenav,setsidenav]=useState('');
@@ -14,7 +15,7 @@ const Nav = () => {
 
       <div className='flex justify-evenly items-center h-full px-4'>
         <div>
-          <h3 className='text-white  font-bold text-lg'>Logo</h3>
+          <div><img src={img} alt="" className='w-[100px] h-[100px]  rounded-full' /></div>
         </div>
         
         <div className='lg:flex gap-8 text-pink-100 hidden font-medium text-sm'>
