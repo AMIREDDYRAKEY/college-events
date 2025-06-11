@@ -7,6 +7,7 @@ import img5 from '../assets/thoughts.jpg';
 import { useNavigate } from 'react-router-dom';
 import Register from './Register';
 import Individualevent from './Individualevent';
+import Footer from './footer';
 const Cards = ({ limit }) => {
   const [isopen, setisopen] = useState(false);
   const [details,setdetails] = useState(false)
@@ -42,6 +43,13 @@ const Cards = ({ limit }) => {
     },
     {
       img: img5,
+      EventName: 'Click Your Thoughts',
+      Under: 'Tech Explore 2024',
+      Date: '24/02/2025',
+       
+    },
+     {
+      img: img2,
       EventName: 'Click Your Thoughts',
       Under: 'Tech Explore 2024',
       Date: '24/02/2025',
@@ -104,6 +112,7 @@ const Cards = ({ limit }) => {
         </div>
         )
       }
+      <div className=' w-full'><Footer/></div>
     </div>
   );
 };
