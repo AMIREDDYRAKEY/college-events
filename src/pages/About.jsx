@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../components/Nav'
 import Aboutmain from '../components/Aboutmain'
 import Aboutcontent from '../components/Aboutcontent'
-import Footer from '../components/Footer'
+import Footer from '../components/Footermain'
 import Eventviewdetails from '../components/Eventviewdetails'
 const About = () => {
     return (
