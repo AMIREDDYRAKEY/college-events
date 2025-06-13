@@ -63,25 +63,25 @@ const Cards = ({ limit }) => {
       {displayedEvents.map((profiles, index) => (
         <div
           key={index}
-          className='lg:w-[250px] h-[400px] w-[300px]  bg-white/5 backdrop-blur-sm rounded-lg shadow-lg shadow-[#1d3557]/40 transition-transform hover:scale-105 relative'
+          className='lg:w-[280px] h-[400px] w-[300px]  bg-[#12122d] backdrop-blur-sm rounded-lg shadow-2xl  transition-transform hover:scale-105 relative'
         >
           <div className='flex flex-col'>
-            <img src={profiles.img} alt={profiles.EventName} className='h-[230px] lg:w-[250px] w-[300px] rounded-lg' />
+            <img src={profiles.img} alt={profiles.EventName} className='h-[230px] lg:w-[290px] w-[300px] rounded-lg' />
             <div className='flex flex-col px-4 mt-[15px] gap-1'>
               <h1 className='text-xl text-white font-bold'>{profiles.EventName}</h1>
               <p className='text-gray-300 text-lg font-semibold'>{profiles.Under}</p>
               <h3 className='text-gray-300 text-sm font-semibold'>{profiles.Date}</h3>
             </div>
 
-            <div className='flex mt-[20px] lg:ml-[15px] ml-[20px] lg:gap-4 gap-5 font-semibold text-sm text-white'>
+            <div className='flex mt-[20px] lg:ml-[15px] ml-[20px] lg:gap-4   gap-5 font-semibold text-sm text-white'>
               <button
-                className='border border-[#8162c0] h-[30px] w-[100px] rounded-lg'
+                className='border border-[#8162c0] h-[30px] w-[120px] rounded-lg'
                  onClick={()=>setdetails(!details) }
               >
                 Viewdetails
               </button>
               <button
-                className='border border-[#7f46f0] h-[30px] w-[100px] bg-blue-700 rounded-lg'
+                className='border border-[#7f46f0] h-[30px] w-[120px] bg-blue-700 rounded-lg'
                 onClick={() => setisopen(!isopen)}
               >
                 Register

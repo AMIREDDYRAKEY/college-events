@@ -11,41 +11,42 @@ const Nav = () => {
   }
 
   return (
-<div className="w-full  h-[80px] fixed top-0 z-[40]    bg-gradient-to-br from-[#35215f] to via-[#4d026b] ">
+<div className="w-full  h-[80px] fixed top-0 z-[40] rounded-xl bg-[#282859] ">
 
-      <div className='flex justify-evenly items-center h-full px-4'>
-        <div>
-          <div><img src={img} alt="" className='w-[100px] h-[100px]  rounded-full' /></div>
+      <div className='flex justify-between items-center h-full px-10 lg:px-[100px]'>
+        <div className='flex '>
+          <div><img src={img} alt="" className='w-[60px] h-[60px]  rounded-full' /></div>
+           <h3 className='mt-[15px] text-2xl md:flex hidden font-bold'>Tech  <strong className='text-[#ff009b]'>Exlplore</strong> </h3>
         </div>
-        
-        <div className='lg:flex gap-8 text-pink-100 hidden font-semibold   text-sm'>
+           
+        <div className='lg:flex gap-8 text-pink-100 hidden font-semibold md:ml-[-100px]  text-sm'>
           <button
             onClick={() => navigate('/')}
-            className='hover:text-blue-400 transition duration-200'
+            className='hover:text-[#ff009b] transition duration-200'
           >
             Home
           </button>
           <button
             onClick={() => navigate('/About')}
-            className='hover:text-white transition duration-200'
+            className='hover:text-[#ff009b] transition duration-200'
           >
             About
           </button>
           <button
             onClick={() => navigate('/Events')}
-            className='hover:text-white transition duration-200'
+            className='hover:text-[#ff009b] transition duration-200'
           >
             Events
           </button>
           <button
             onClick={() => navigate('/Coordinators')}
-            className='hover:text-white transition duration-200'
+            className='hover:text-[#ff009b] transition duration-200'
           >
             Coordinators
           </button>
           <button
             onClick={() => navigate('/Contact')}
-            className='hover:text-white transition duration-200'
+            className='hover:text-[#ff009b] transition duration-200'
           >
             Contact
           </button>

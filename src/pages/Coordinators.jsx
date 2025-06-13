@@ -19,7 +19,7 @@ const Coordinators = () => {
   ];
 
   return (
-    <div className="min-h-screen pb-[50px] lg:pt-[100px] pt-[60px] bg-gradient-to-br from-[#27164d] via-[#581572] to-[#4e032e]">
+    <div className="min-h-screen pb-[50px] lg:pt-[100px] pt-[60px] bg-[#1a1135]">
       <div className="">
         <Nav />
       </div>
@@ -32,7 +32,7 @@ const Coordinators = () => {
         {Facultycoordinators.map((info, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 lg:grid-cols-4 gap-3 p-4 shadow-md border border-pink-400 rounded-lg bg-white/5 backdrop-blur-md lg:w-[70%] w-[90%] mx-auto"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-3 p-4 shadow-2xl border-[#301b6e] border-[1px] rounded-lg bg-[#1a1135] backdrop-blur-md lg:w-[70%] w-[90%] mx-auto"
           >
             <h2 className="text-pink-300 font-semibold text-center lg:block hidden">{info.Sno}</h2>
             <h2 className="text-pink-200 font-semibold text-center lg:text-sm text-xl">{info.Name}</h2>
@@ -50,7 +50,7 @@ const Coordinators = () => {
           {studentcordinators.map((info, index) => (
             <div
               key={index}
-            className="grid grid-cols-1 lg:grid-cols-4 gap-3 p-4  shadow-md border border-pink-400 rounded-lg bg-white/5 backdrop-blur-md lg:w-[70%] w-[90%] mx-auto"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-3 p-4  shadow-2xl border-[#301b6e] border-[1px] rounded-lg bg-[#1a1135] lg:w-[70%] w-[90%] mx-auto"
             >
               <h2 className="text-pink-300 font-semibold text-center lg:block hidden">{info.Sno}</h2>
               <h2 className="text-pink-200 font-semibold text-center lg:text-sm text-xl">{info.StudentName}</h2>

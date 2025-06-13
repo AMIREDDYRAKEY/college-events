@@ -54,7 +54,7 @@ const ContactInfo = () => {
                                 className="lg:h-[200px] lg:w-[200px] h-[120px] w-[120px] shadow-lg border-[1px] border-purple-800 rounded-full object-cover z-"
                             />
                         </div>
-                        <div className="flex flex-col gap-2 lg:text-md text-[10px] bg-purple-900 shadow-purple-500 shadow-sm lg:h-[150px] h-[100px] lg:mt-[15px] mt-[0] ml-[-80px] justify-center  items-center lg:w-[280px] w-[200px]  rounded-r-full text-white">
+                        <div className="flex flex-col gap-2 lg:text-md text-[10px] bg-[#281563]  shadow-md shadow-[#443869]  lg:h-[150px] h-[100px] lg:mt-[15px] mt-[0] ml-[-80px] justify-center  items-center lg:w-[280px] w-[200px]  rounded-r-full text-white">
                             <p > <strong >Name:</strong> {info.Name}</p>
                             <p> <strong >Roll No:</strong> {info.RollNo}</p>
                             <p> <strong >Section:</strong> {info.Section}</p>

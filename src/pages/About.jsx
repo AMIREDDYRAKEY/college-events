@@ -6,7 +6,7 @@ import Footer from '../components/Footermain'
 import Eventviewdetails from '../components/Eventviewdetails'
 const About = () => {
     return (
-       <div className="min-h-screen pb-[50px] bg-gradient-to-br from-[#27164d] via-[#581572] to-[#4e032e]">
+       <div className="min-h-screen pb-[50px] bg-[#12122d]">
       <div className="">
         <Nav />
       </div>
