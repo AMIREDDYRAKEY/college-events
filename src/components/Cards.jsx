@@ -20,25 +20,25 @@ const Cards = ({ limit }) => {
       EventName: 'Paper Presentation',
       Under: 'Tech Explore 2024',
       Date: '24/02/2025',
-      desc: "Paper Presentation is an opportunity for students to showcase their research and innovative ideas. Participants will present their technical papers on emerging technologies, current trends, and innovative solutions to real-world problems.",
+      // desc: "Paper Presentation is an opportunity for students to showcase their research and innovative ideas. Participants will present their technical papers on emerging technologies, current trends, and innovative solutions to real-world problems.",
       time: "10:00 AM - 12:00 PM",
-      venue: "Main Auditorium"
+      venue: "CSE-E Class Room"
     },
     {
       img: img2,
       EventName: 'Bug Hunting',
       Under: 'Tech Explore 2024',
       Date: '07/01/2025',
-      desc: "Bug Hunting is a thrilling competition designed for coders and developers who love debugging and problem-solving. Participants will be given pre-written code snippets embedded with logical or syntactical bugs. The task is to analyze, detect, and fix these issues within a set timeframe",
+      // desc: "Bug Hunting is a thrilling competition designed for coders and developers who love debugging and problem-solving. Participants will be given pre-written code snippets embedded with logical or syntactical bugs. The task is to analyze, detect, and fix these issues within a set timeframe",
       time: "10:00 AM - 12:00 PM",
-      venue: "CSE Lab"
+      venue: "CSE-E Class Room"
     },
     {
       img: img3,
       EventName: 'Brain Busters',
       Under: 'Tech Explore 2024',
       Date: '23/12/24',
-      desc: "Brain Busters is a high-intensity quiz-based competition that tests your knowledge, logic, and quick thinking. Designed to challenge even the sharpest minds, this event features multiple rounds that span across topics like science, tech, puzzles, general knowledge, and current affairs.",
+      // desc: "Brain Busters is a high-intensity quiz-based competition that tests your knowledge, logic, and quick thinking. Designed to challenge even the sharpest minds, this event features multiple rounds that span across topics like science, tech, puzzles, general knowledge, and current affairs.",
       time: "9:00 AM - 10:00 AM",
       venue: "CSE E-Classroom"
     },
@@ -47,18 +47,18 @@ const Cards = ({ limit }) => {
       EventName: 'Techno Jam',
       Under: 'Tech Explore 2024',
       Date: '14/02/25',
-      desc: "Techno Jam is a thrilling on-the-spot speaking challenge where participants must speak fluently and confidently about random technical and general topics without hesitation or repetition. It's the ultimate test of presence of mind, communication skills, and tech vocabulary under pressure.",
+      // desc: "Techno Jam is a thrilling on-the-spot speaking challenge where participants must speak fluently and confidently about random technical and general topics without hesitation or repetition. It's the ultimate test of presence of mind, communication skills, and tech vocabulary under pressure.",
       time: "9:00 AM - 10:30 AM",
-      venue: "Main Auditorium"
+      venue: "CSE-E Class Room"
     },
     {
       img: img5,
       EventName: 'Click Your Thoughts',
       Under: 'Tech Explore 2024',
       Date: '24/02/2025',
-      desc: "Click Your Thoughts is a photography competition that challenges participants to capture the essence of technology and innovation through their lens. Showcase your perspective on how technology shapes our world.",
+      // desc: "Click Your Thoughts is a photography competition that challenges participants to capture the essence of technology and innovation through their lens. Showcase your perspective on how technology shapes our world.",
       time: "2:00 PM - 4:00 PM",
-      venue: "Campus Grounds"
+      venue: "CSE-E Class Room"
     }
   ];
 
@@ -70,7 +70,7 @@ const Cards = ({ limit }) => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 mt-10 z-[0] px-2 relative">
+    <div className="flex flex-wrap justify-center gap-6 mt-10 z-[100px] px-2 relative">
       {displayedEvents.map((profiles, index) => (
         <div
           key={index}
@@ -104,7 +104,7 @@ const Cards = ({ limit }) => {
 
       {/* Register Modal */}
       {isopen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70  z-[100] ">
           <div className="rounded-lg p-6 relative z-50 w-[90%] max-w-md">
             <Register setisopen={setisopen} isopen={isopen} />
           </div>
@@ -113,8 +113,8 @@ const Cards = ({ limit }) => {
 
       {/* View Details Modal */}
       {details && selectedEvent && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
-          <div className="rounded-lg p-6 relative z-50 w-[90%] max-w-md">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[100]">
+          <div className="rounded-lg p-6 relative z-[100px] w-[90%] max-w-md">
             <Individualevent 
               details={details} 
               setdetails={setdetails}

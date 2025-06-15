@@ -3,6 +3,7 @@ import img from '../assets/Brain.jpg'
 import img2 from '../assets/bug.jpg'
 import img3 from '../assets/jam.webp'
 import img4 from '../assets/thoughts.jpg'
+import img5 from'../assets/presen.jpg'
 const scheduleData = {
   "23/12/24": [
     {
@@ -31,15 +32,24 @@ const scheduleData = {
       img: img3,
          
     }
+    
+  ],
+  "12/12/2025":[
+    {
+       title: "Poster Presentation",
+      desc: "The Poster Presentation event offers a platform for students and researchers to visually communicate their ideas, innovations, and research findings. Participants design academic or technical posters summarizing their projects and present them to a panel of judges and an audience. The goal is to convey complex concepts ",
+      time: "9.00 am - 10.30 am",
+      img: img5,
+    }
   ]
+  
 };
-
 const Eventviewdetails = () => {
  const [activeDay, setActiveDay] = useState(Object.keys(scheduleData)[0]);
 
 
   return (
-    <div className="p-6 max-w-5xl mx-auto text-white  mt-[30px] lg:mt-[50px]">
+    <div className="p-6 max-w-5xl mx-auto text-white  mt-[30px] lg:mt-[50px]  ">
       <h1 className="text-4xl text-center font-bold mb-6 "> Event Schedule Details</h1>
 
       {/* Tabs */}

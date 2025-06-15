@@ -8,7 +8,7 @@ import Cards from '../components/Cards';
 
 const Home = () => {
   return (
-    <div className="min-h-screen relative pb-[50px] bg-[#12122d] z-0">
+    <div className="min-h-screen relative pb-[50px] bg-[#12122d]  ">
       <div className="">
         <Nav />
       </div>

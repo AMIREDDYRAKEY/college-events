@@ -5,6 +5,7 @@ const Register = ({ isopen, setisopen }) => {
     const [sub, setsub] = useState('')
     const [Name, setName] = useState('')
     const [Idno, setIdno] = useState('')
+    const [Section,setSection]=useState('')
     const [errors, seterrors] = useState({
         Name: '',
         Idno: ''
@@ -23,6 +24,13 @@ const Register = ({ isopen, setisopen }) => {
         }
         else {
             seterrors((errors) => ({ ...errors, Idno: '' }))
+        }
+        // section
+        if(Section === ''){
+            seterrors((errors) =>({...errors,Section:'Section is Required'}))
+        }
+        else{
+            seterrors((errors) =>({...errors,Section:''}))
         }
     }
     const submit = () => {
@@ -55,6 +63,11 @@ const Register = ({ isopen, setisopen }) => {
                                 <div className='flex flex-col'>
                                     <input type="text" placeholder="Id No" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Idno} onChange={(e) => setIdno(e.target.value)} />
                                     <span className='text-red-600 font-semibold ml-[10px]'>{errors.Idno}</span>
+                                </div>
+                                {/* section */}
+                                 <div className='flex flex-col'>
+                                    <input type="text" placeholder="Section" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Section} onChange={(e) => setSection(e.target.value)} />
+                                    <span className='text-red-600 font-semibold ml-[10px]'>{errors.Section}</span>
                                 </div>
                             </div>
                             <div className="mt-[-10px] flex flex-col gap-2 items-center justify-center">

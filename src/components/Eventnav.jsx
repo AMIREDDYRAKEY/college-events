@@ -18,7 +18,7 @@ const Eventnav = () => {
       </div>
       {/* cards */}
       <div><Cards /></div>
-      <div className=' w-full'><Footer /></div>
+      <div className=' w-full '><Footer /></div>
 
     </div>
   )

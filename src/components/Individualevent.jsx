@@ -19,8 +19,8 @@ const Individualevent = ({ details, setdetails, event }) => {
   ];
 
   return (
-    <div className="flex flex-col lg:justify-center z-100 lg:items-center">
-      <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px] bg-[#131e4e] rounded-lg shadow-md text-white">
+    <div className="flex flex-col lg:justify-center  z-[100px] lg:items-center">
+      <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px] bg-[#131e4e]  rounded-lg shadow-md text-white ">
         {/* Image */}
         <div>
           <img
@@ -31,7 +31,7 @@ const Individualevent = ({ details, setdetails, event }) => {
         </div>
 
         {/* Buttons and Content */}
-        <div className="flex flex-col gap-3 justify-start w-full">
+        <div className="flex flex-col gap-3 justify-start w-full ">
           <div className="lg:flex lg:flex-row grid grid-cols-2 lg:gap-3 gap-3">
             <button
               onClick={() => setactivetab('schedule')}
@@ -76,9 +76,7 @@ const Individualevent = ({ details, setdetails, event }) => {
               <div className="flex gap-2">
                 <strong>Venue:</strong> <p>{event.venue}</p>
               </div>
-              <div className="flex gap-2 mt-2">
-                <strong>Description:</strong> <p className="text-gray-300">{event.desc}</p>
-              </div>
+              
             </div>
           )}
 
