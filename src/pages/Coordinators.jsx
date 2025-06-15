@@ -25,7 +25,7 @@ const Coordinators = () => {
       </div>
 
       <div className="flex flex-col gap-8 items-center justify-center mt-[40px] px-4">
-        <h1 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#c43b9f] via-[#8f1ddb] to-[#aa0a68]">
+        <h1 className="text-4xl font-bold text-center text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400">
           Our Faculty Coordinators
         </h1>
 
@@ -43,7 +43,7 @@ const Coordinators = () => {
       </div>
 
       <div className='mt-[50px]'>
-        <h1 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#ff5ecd] via-[#b14eff] to-[#7a4fff]">
+        <h1 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400">
           Our Student Coordinators
         </h1>
         <div className='flex flex-col gap-6 mt-[40px] items-center justify-center'>

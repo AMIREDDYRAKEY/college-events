@@ -29,7 +29,7 @@ const Register = ({ isopen, setisopen }) => {
         setsub(true)
     }
     return (
-        <div className='z-[50px'>
+        <div className='z-[100px]'>
             <div className="flex items-center justify-center top-0 right-0 left-0   ">
                 <div className="flex items-center justify-center">
                     <div className="  w-[300px] mt-[12%] rounded-lg shadow-lg p-4 shadow-[#4b3c63] bg-[#34244c]">
@@ -44,7 +44,7 @@ const Register = ({ isopen, setisopen }) => {
 
                             </button>
                         </div>
-                        <div className="flex flex-col gap-7 items-center justify-center">
+                        <div className="flex flex-col gap-7 items-center justify-center ">
                             <div className="flex flex-col gap-3 items-center justify-center mt-[20px]">
                                 {/* Username */}
                                 <div className='flex flex-col'>

@@ -8,14 +8,14 @@ const Aboutmain = () => {
         <div >
             <div className='flex flex-col items-center justify-center lg:pt-[120px] pt-[100px] px-[20px]'>
                 {/* About  */}
-                <h2 className='text-4xl font-bold text-center mb-6 text-white'>About </h2>
+                <h2 className='text-4xl font-bold text-center mb-6 text-[#f033d7]'>About </h2>
 
                 {/* Image */}
                 <div className='w-full flex justify-center'>
                     <img
                         src={img}
                         alt="About AITS"
-                        className='rounded-xl shadow-lg lg:w-[95%]  h-[450px] object-fit'
+                        className='rounded-xl shadow-lg lg:w-[90%]  h-[450px] object-fit'
                     />
                 </div>
             </div>

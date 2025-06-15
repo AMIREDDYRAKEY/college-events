@@ -43,7 +43,7 @@ const contacts = [
 const ContactInfo = () => {
     return (
         <div className="mt-[50px] lg:pt-[70px] pt-[60px]">
-            <h3 className="text-4xl text-center font-bold">Contact Us</h3>
+            <h3 className="text-4xl text-center font-bold text-[#f183e3]">Contact Us</h3>
             <div className="px-[0px] flex flex-wrap gap-4 justify-around">
                 {contacts.map((info, index) => (
                     <div className="flex gap-8 items-center lg:ml-[40px]  mt-[30px]">
