@@ -1,12 +1,20 @@
 import React from 'react';
 import Nav from '../components/Nav';
+import Footer from '../components/Footermain';
 
 const Coordinators = () => {
   const Facultycoordinators = [
-    { Sno: '1', Name: 'A. Sudhakar Reddy', EventName: 'EventName', Role: 'Principal' },
-    { Sno: '2', Name: 'Dr. C Venkata Subbaiah', EventName: 'EventName', Role: 'HOD' },
-    { Sno: '3', Name: 'S.M.D Ali', EventName: 'EventName', Role: 'Professor' },
-    { Sno: '4', Name: 'Faculty Name', EventName: 'EventName', Role: 'Professor' },
+    { Sno: '1', 
+      Name: 'A. Sudhakar Reddy', 
+      EventName: 'EventName',
+       Role: 'Principal' },
+    { Sno: '2', 
+      Name: 'Dr. C Venkata Subbaiah', 
+      EventName: 'EventName', Role: 'HOD' },
+    { Sno: '3', Name: 'S.M.D Ali', 
+      EventName: 'EventName', Role: 'Professor' },
+    { Sno: '4', Name: 'Faculty Name',
+       EventName: 'EventName', Role: 'Professor' },
     { Sno: '5', Name: 'Faculty Name', EventName: 'EventName', Role: 'About' },
   ];
 
@@ -60,6 +68,8 @@ const Coordinators = () => {
           ))}
         </div>
       </div>
+      <div><Footer/></div>
+
     </div>
   );
 };
