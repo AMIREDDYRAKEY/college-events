@@ -4,7 +4,7 @@ import img from '../assets/aitslogo.png';
 const Footer = () => {
   return (
     <div className="mt-[60px]  flex items-center justify-center">
-      <div className="backdrop-blur-md bg-[#22223b] shadow-xl rounded-2xl p-6 pb-8 w-[95%] md:w-[85%] flex flex-col md:p-[70px] lg:flex-row justify-between gap-8 lg:items-center">
+      <div className="border-[1px] border-[#403f68] shadow-[#1d1c36]  shadow-md rounded-2xl p-6 pb-8 w-[98%] md:w-[89%] flex flex-col md:p-[70px] lg:flex-row justify-between gap-8 lg:items-center">
 
         {/* Info Section */}
         <div className="flex flex-col gap-2 text-white">

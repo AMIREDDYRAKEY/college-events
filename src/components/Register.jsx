@@ -40,11 +40,11 @@ const Register = ({ isopen, setisopen }) => {
         <div className='z-[100px]'>
             <div className="flex items-center justify-center top-0 right-0 left-0   ">
                 <div className="flex items-center justify-center">
-                    <div className="  w-[300px] mt-[12%] rounded-lg shadow-lg p-4 shadow-[#4b3c63] bg-[#34244c]">
+                    <div className="  md:w-[320px] w-[300px] mt-[12%] rounded-lg shadow-lg p-4 shadow-[#4b3c63] bg-[#34244c]">
                         <div className='flex flex-row-reverse justify-center '>
                             <h3 className='text-3xl text-center font-semibold '>Register</h3>
                             <button
-                                className="absolute  ml-[270px] mt-[-17px] text-white font-bold text-2xl"
+                                className="absolute  md:ml-[290px] ml-[270px] mt-[-15px] text-white font-bold text-2xl"
                                 onClick={() => setisopen(!isopen)}
 
                             >
@@ -56,22 +56,22 @@ const Register = ({ isopen, setisopen }) => {
                             <div className="flex flex-col gap-3 items-center justify-center mt-[20px]">
                                 {/* Username */}
                                 <div className='flex flex-col'>
-                                    <input type="text" placeholder="Enter Your Name" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Name} onChange={(e) => setName(e.target.value)} />
+                                    <input type="text" placeholder="Enter Your Name" className="w-[270px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Name} onChange={(e) => setName(e.target.value)} />
                                      <span className='text-red-600 font-semibold ml-[10px]'>{errors.Name}</span>
                                 </div>
                                 {/* Idno */}
                                 <div className='flex flex-col'>
-                                    <input type="text" placeholder="Id No" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Idno} onChange={(e) => setIdno(e.target.value)} />
+                                    <input type="text" placeholder="Id No" className="w-[270px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Idno} onChange={(e) => setIdno(e.target.value)} />
                                     <span className='text-red-600 font-semibold ml-[10px]'>{errors.Idno}</span>
                                 </div>
                                 {/* section */}
                                  <div className='flex flex-col'>
-                                    <input type="text" placeholder="Section" className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Section} onChange={(e) => setSection(e.target.value)} />
+                                    <input type="text" placeholder="Section" className="w-[270px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Section} onChange={(e) => setSection(e.target.value)} />
                                     <span className='text-red-600 font-semibold ml-[10px]'>{errors.Section}</span>
                                 </div>
                             </div>
                             <div className="mt-[-10px] flex flex-col gap-2 items-center justify-center">
-                                <button className="h-[40px] w-[220px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>
+                                <button className="h-[40px] w-[270px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>
                                 {
                                     sub && (
                                         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 

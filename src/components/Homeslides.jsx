@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination,Autoplay } from 'swiper/modules';
 import "./style.css"
-import img from '../assets/slide 1.jpg'
+import img from '../assets/std3.jpg'
 import img3 from '../assets/slide3.jpg'
 import img4 from '../assets/slide4.jpg'
 const HomeIntro = () => {

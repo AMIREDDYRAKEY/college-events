@@ -11,13 +11,13 @@ import img9 from '../assets/std5.jpg'
 
 const Aboutcontent = () => {
   return (
-    <div className='lg:mt-[60px] mt-[50px] px-6 md:px-20'>
+    <div className='lg:mt-[120px] mt-[50px] px-6  md:px-20'>
       <div>
-        <h3 className='lg:text-4xl text-2xl font-bold text-white mb-8 lg:text-center md:text-left'>
+        <h3 className='lg:text-4xl text-4xl text-center font-bold text-white mb-8'>
           Conducting  Tech Explore
         </h3>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:pt-[30px] pt-[10px] gap-6'>
           <img src={img} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
           <img src={img2} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
           <img src={img3} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />

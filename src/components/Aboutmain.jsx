@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/aits.avif';
+import img from '../assets/aitsimg.jpg';
 import naclogo from '../assets/naclogo.png'
 import nbalogo from '../assets/nbalogo.png'
 import ugclogo from '../assets/ugclogo.png'

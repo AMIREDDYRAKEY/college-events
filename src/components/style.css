@@ -36,15 +36,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* Hide scrollbar but allow scrolling */
-
-/* For WebKit browsers (Chrome, Safari, Edge) */
-.scroll-hidden::-webkit-scrollbar {
-  display: none;
+ 
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
 }
-
-/* For Firefox */
-.scroll-hidden {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+.no-scrollbar {
+  scrollbar-width: none; 
+}
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4b3c63;
 }

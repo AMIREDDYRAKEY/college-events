@@ -57,7 +57,7 @@ const Userlogin = () => {
     <div>
       <div className="min-h-screen bg-gradient-to-br from-[#0b132b] via-[#2a1b3d] to-[#3a506b]">
         <div className="flex items-center justify-center  ">
-          <div className=" pb-[20px] w-[300px] lg:mt-[12%] mt-[200px] rounded-lg shadow-lg  shadow-[#4b3c63]  bg-[#34244c]">
+          <div className=" pb-[20px] md:w-[320px] w-[300px] lg:mt-[12%] mt-[200px] rounded-lg shadow-lg  shadow-[#4b3c63]  bg-[#34244c]">
             {/* user */}
             <div className="flex justify-center mt-[-40px]">
               <div className="flex items-center justify-center bg-[#403f68] h-[80px] w-[80px] rounded-full">
@@ -67,20 +67,20 @@ const Userlogin = () => {
             <div className="flex flex-col gap-7 items-center justify-center">
               <h3 className="text-4xl text-white font-semibold uppercase mt-[10px]">Login </h3>
 
-              <div className="flex flex-col gap-3 mt-[-20px] items-center justify-center">
-                <span className='flex flex-col  '> <input type="text" placeholder="Username" value={username} className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setusername(e.target.value)} />
-                {errors.username && <span className='text-red-600 ml-[10px]'>{errors.username}</span>}
+              <div className="flex flex-col gap-3 mt-[-10px] items-center justify-center">
+                <span className='flex flex-col  '> <input type="text" placeholder="Username" value={username} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setusername(e.target.value)} />
+                {errors.username && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.username}</span>}
               </span>
-               <span className='flex flex-col'> <input type="Password" placeholder="Password" value={password} className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setpassword(e.target.value)} />
-                {errors.password && <span className='text-red-600 ml-[10px]'>{errors.password}</span>}
+               <span className='flex flex-col'> <input type="Password" placeholder="Password" value={password} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setpassword(e.target.value)} />
+                {errors.password && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.password}</span>}
               </span>
-                <span className='flex flex-col'> <input type="text" placeholder="ID NO" value={Idno} className="px-6 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setIdno(e.target.value)} />
-                {errors.Idno && <span className='text-red-600 ml-[10px]'>{errors.Idno}</span>}
+                <span className='flex flex-col'> <input type="text" placeholder="ID NO" value={Idno} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setIdno(e.target.value)} />
+                {errors.Idno && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.Idno}</span>}
               </span>
               </div>
 
-              <div className="mt-[-10px] flex flex-col gap-2 items-center justify-center">
-                <button className="h-[40px] w-[220px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>
+              <div className="mt-[-6px] flex flex-col gap-2 items-center justify-center">
+                <button className="h-[40px] w-[250px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>
                 {
                   open && (
                     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 

@@ -41,6 +41,15 @@ const scheduleData = {
       time: "9.00 am - 10.30 am",
       img: img5,
     }
+  ],
+
+   "10/12/2025":[
+    {
+       title: "Click Your Thoughts",
+      desc: "The Poster Presentation event offers a platform for students and researchers to visually communicate their ideas, innovations, and research findings. Participants design academic or technical posters summarizing their projects and present them to a panel of judges and an audience. The goal is to convey complex concepts ",
+      time: "9.00 am - 10.30 am",
+      img: img5,
+    }
   ]
   
 };
@@ -50,15 +59,17 @@ const Eventviewdetails = () => {
 
   return (
     <div className="p-6 max-w-5xl mx-auto text-white  mt-[30px] lg:mt-[50px]  ">
-      <h1 className="text-4xl text-center font-bold mb-6 "> Event Schedule Details</h1>
+      <h1 className="md:text-4xl text-4xl  font-bold mb-6 text-center "> Event Schedule Details</h1>
 
-      {/* Tabs */}
-      <div className="lg:flex lg:flex-row grid grid-cols-2 gap-4 mt-[40px] items-center justify-center mt-">
+       
+      <div className='md:flex md:flex-row md:justify-between   flex flex-col'>
+        {/* Tabs */}
+      <div className="lg:flex lg:flex-col grid grid-cols-2 gap-3 lg:gap-2 mt-[20px] items-center justify-center mt-">
         {
         Object.keys(scheduleData).map((day) => (
           <button
             key={day}
-            className={`px-4 py-2 rounded-md font-medium ${
+            className={`h-[40px] w-[100px] rounded-md font-medium ${
               activeDay === day
                 ? "bg-purple-600 text-white"
                 : "bg-gray-200 text-black"
@@ -69,20 +80,20 @@ const Eventviewdetails = () => {
           </button>
         ))}
       </div>
-
       {/* Events */}
-      <div className=" flex items-center justify-center lg:mt-[60px] mt-[20px] ">
+      <div className=" flex items-center justify-center lg:mt-[30px] mt-[20px] ">
         {
         scheduleData[activeDay].map((event, index) => (
-          <div key={index} className="bg-white shadow-md lg:h-[200px] lg:w-[600px] rounded-lg lg:flex lg:flex-row flex flex-col gap-4 p-5 items-center justify-center">
-            <img src={event.img} alt={event.title} className="lg:w-[180px] h-[150px] rounded-md object-cover" />
-            <div className='flex flex-col items-start justify-start mb-[0px]'>
+          <div key={index} className="bg-white shadow-md lg:h-[250px] lg:w-[800px] rounded-lg lg:flex lg:flex-row flex flex-col gap-10 p-5 items-center justify-center">
+            <img src={event.img} alt={event.title} className="lg:w-[200px] h-[230px] rounded-md object-cover" />
+            <div className='flex flex-col items-start gap-4 justify-start mb-[0px]'>
               <h2 className="lg:text-3xl text-xl text-black font-bold ">{event.title}</h2>
-              <p className="text-gray-700 text-md  ">{event.desc}</p>
+              <p className="text-gray-700 text-[15px]  ">{event.desc}</p>
               <span className="text-purple-600 font-semibold text-md">{event.time}</span>
              </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
