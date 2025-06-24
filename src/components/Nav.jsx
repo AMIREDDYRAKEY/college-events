@@ -6,9 +6,9 @@ import img from '../assets/aitslogo.png'
 const Nav = () => {
   const navigate = useNavigate();
   const [sidenav,setsidenav]=useState('');
-  const [aboutactive, setaboutactive] = useState(false);
-  const [eventsactive,seteventsactive]=useState(false)
-  const [Cactive,setCactive]=useState(false)
+  const [aboutactive, setaboutactive] = useState('/About');
+  const [eventsactive,seteventsactive]=useState('/Events')
+  const [Cactive,setCactive]=useState('/Coordinators')
   const [Contactactive,setContactactive]=useState('/Contact')
   const opensidenav =()=>{
     setsidenav(true)
@@ -29,19 +29,19 @@ const Nav = () => {
           </button>
           <button
             onClick={() => {navigate('/About');setaboutactive(true)}}
-            className={` ${aboutactive ? 'text-[#ff009b]':'text-white'} ` }
+            className={` ${aboutactive === '/About' ? 'text-white':'text-[#ff009b]'} ` }
           >
             About
           </button>
           <button
             onClick={() =>{ navigate('/Events');seteventsactive(true)}}
-            className={` ${eventsactive ? 'text-[#ff009b]':'text-white'} ` }
+            className={` ${eventsactive === '/Events' ? 'text-white':'text-[#ff009b]'} ` }
           >
             Events
           </button>
           <button
             onClick={() => {navigate('/Coordinators');setCactive(true)}}
-            className={` ${Cactive ? 'text-[#ff009b]':'text-white'} ` }
+            className={` ${Cactive === '/Coordinators' ? 'text-white':'text-[#ff009b]'} ` }
           >
             Coordinators
           </button>
