@@ -59,7 +59,10 @@ const Eventviewdetails = () => {
 
   return (
     <div className="p-6 max-w-5xl mx-auto text-white  mt-[30px] lg:mt-[50px]  ">
-      <h1 className="md:text-4xl text-4xl  font-bold mb-6 text-center "> Event Schedule Details</h1>
+      <div className='flex flex-col'><h3 className='lg:text-4xl text-4xl text-center font-serif text-[#ff009b]'>
+  Event Schedule Details</h3>
+  <div className='flex justify-center mt-[15px]'><span className='border-[1px]   border-[#ff009b] w-[300px] '></span></div>
+</div>
 
        
       <div className='md:flex md:flex-row md:justify-between   flex flex-col'>

@@ -16,7 +16,7 @@ const HomeHero = () => {
 
       {/* About Section */}
       <div className="w-full md:w-1/2 text-[#e3ebe6] text-lg md:text-xl space-y-6 leading-relaxed font-semibold">
-        <h2 className="text-3xl font-bold text-[#4a3fdd]"> TechExplore 2024</h2>
+        <h2 className="text-3xl font-bold text-[#ff009b]"> TechExplore 2024</h2>
         <p>
           <span className="text-[#7d4eeb] font-semibold">TechExplore 2024</span> is a national-level intercollegiate technical symposium organized by the <span className=" text-2xl font-bold">Department of Computer Science and Engineering</span>. This annual fest provides a vibrant platform for young innovators to showcase their technical skills, creativity, and knowledge in the latest domains of computing.
         </p>

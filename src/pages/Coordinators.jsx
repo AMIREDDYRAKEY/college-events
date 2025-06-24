@@ -4,57 +4,67 @@ import Footer from '../components/Footermain';
 
 const Coordinators = () => {
   const Facultycoordinators = [
-    { Sno: '1', 
-      Name: 'A. Sudhakar Reddy', 
+    {
+      Sno: '1',
+      Name: 'A. Sudhakar Reddy',
       EventName: 'EventName',
-       Role: 'Principal'
-       },
-    { Sno: '2', 
-      Name: 'Dr. C Venkata Subbaiah', 
-      EventName: 'EventName', 
-      Role: 'HOD' 
+      Role: 'Principal'
     },
-    { Sno: '3', 
-      Name: 'S.M.D Ali', 
-      EventName: 'EventName', 
+    {
+      Sno: '2',
+      Name: 'Dr. C Venkata Subbaiah',
+      EventName: 'EventName',
+      Role: 'HOD'
+    },
+    {
+      Sno: '3',
+      Name: 'S.M.D Ali',
+      EventName: 'EventName',
       Role: 'Professor'
-     },
-    { Sno: '4', Name: 'Faculty Name',
-       EventName: 'EventName', 
-       Role: 'Professor' 
-      },
-    { Sno: '5',
-       Name: 'Faculty Name', 
-      EventName: 'EventName', 
-      Role: 'About' 
+    },
+    {
+      Sno: '4', Name: 'Faculty Name',
+      EventName: 'EventName',
+      Role: 'Professor'
+    },
+    {
+      Sno: '5',
+      Name: 'Faculty Name',
+      EventName: 'EventName',
+      Role: 'About'
     },
   ];
 
   const studentcordinators = [
-    { Sno: '1', 
+    {
+      Sno: '1',
       StudentName: 'Y.Pradeep',
-       Year: 'III-C',
-        Posisition: 'President'
-       },
-    { Sno: '2', 
-      StudentName: 'G.Venkata Tharun',
-        Year: 'II-A',
-       Posisition: 'Scretary'
-       },
-    { Sno: '3', 
-      StudentName: 'K.Vijay Kumar', 
-      Year: 'III-A', 
-      Posisition: 'Vice President' 
+      Year: 'III-C',
+      Posisition: 'President'
     },
-    { Sno: '4', 
-      StudentName: 'K.Venkata Pavan', 
-      Year: 'III-C', 
+    {
+      Sno: '2',
+      StudentName: 'G.Venkata Tharun',
+      Year: 'II-A',
+      Posisition: 'Scretary'
+    },
+    {
+      Sno: '3',
+      StudentName: 'K.Vijay Kumar',
+      Year: 'III-A',
+      Posisition: 'Vice President'
+    },
+    {
+      Sno: '4',
+      StudentName: 'K.Venkata Pavan',
+      Year: 'III-C',
       Posisition: 'Treasure'
-     },
-    { Sno: '5', 
-      StudentName: 'K.Mythili', 
-      Year: 'III-B', 
-      Posisition: 'Treasure' 
+    },
+    {
+      Sno: '5',
+      StudentName: 'K.Mythili',
+      Year: 'III-B',
+      Posisition: 'Treasure'
     },
   ];
 
@@ -65,9 +75,10 @@ const Coordinators = () => {
       </div>
 
       <div className="flex flex-col gap-8 items-center justify-center mt-[40px] px-4">
-        <h1 className="text-4xl font-bold text-center text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400">
-          Our Faculty Coordinators
-        </h1>
+        <div className='flex flex-col'><h3 className='lg:text-4xl text-4xl text-center font-serif text-[#ff009b]'>
+          Our Faculty Coordinators</h3>
+          <div className='flex justify-center mt-[15px]'><span className='border-[1px]   border-[#ff009b] w-[250px] md:w-[300px] '></span></div>
+        </div>
 
         {Facultycoordinators.map((info, index) => (
           <div
@@ -83,14 +94,15 @@ const Coordinators = () => {
       </div>
 
       <div className='mt-[50px]'>
-        <h1 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400">
-          Our Student Coordinators
-        </h1>
+        <div className='flex flex-col'><h3 className='lg:text-4xl text-4xl text-center font-serif text-[#ff009b]'>
+  Our Student Coordinators</h3>
+  <div className='flex justify-center mt-[15px]'><span className='border-[1px]   border-[#ff009b] w-[250px] md:w-[300px] '></span></div>
+</div>
         <div className='flex flex-col gap-6 mt-[40px] items-center justify-center'>
           {studentcordinators.map((info, index) => (
             <div
               key={index}
-            className="grid grid-cols-1 lg:grid-cols-4 gap-3 p-4  shadow-2xl border-[#301b6e] border-[1px] rounded-lg bg-[#1a1135] lg:w-[70%] w-[90%] mx-auto"
+              className="grid grid-cols-1 lg:grid-cols-4 gap-3 p-4  shadow-2xl border-[#301b6e] border-[1px] rounded-lg bg-[#1a1135] lg:w-[70%] w-[90%] mx-auto"
             >
               <h2 className="text-pink-300 font-semibold text-center lg:block hidden">{info.Sno}</h2>
               <h2 className="text-pink-200 font-semibold text-center lg:text-sm text-xl">{info.StudentName}</h2>
@@ -100,7 +112,7 @@ const Coordinators = () => {
           ))}
         </div>
       </div>
-      <div><Footer/></div>
+      <div><Footer /></div>
 
     </div>
   );

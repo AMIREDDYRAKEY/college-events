@@ -11,9 +11,10 @@ const Eventnav = () => {
     <div className="min-h-screen  pb-[50px]  lg:pt-[100px] pt-[60px] flex flex-col items-center justify-center  bg-[#12122d]">
       <div className='w-[100%] '><Nav /></div>
       <div className='  pt-[50px] gap-4'>
-        <h1 class="text-4xl md:text-4xl text-[#f033d7] animate-gradient-x text-center font-bold">
-          Tech Explore Events
-        </h1>
+        <div className='flex flex-col'><h3 className='lg:text-4xl text-5xl text-center font-serif text-[#ff009b]'>
+TechExplore Events</h3>
+  <div className='flex justify-center mt-[15px]'><span className='border-[1px]   border-[#ff009b] md:w-[300px] w-[250px] '></span></div>
+</div>
 
       </div>
       {/* cards */}

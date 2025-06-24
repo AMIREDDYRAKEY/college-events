@@ -15,7 +15,10 @@ const Home = () => {
       <div><Homeslides/></div>
       <div><HomeHero/></div>
       <div className='mt-[50px]'>
-        <h3 className='text-5xl text-[#f09cc8] ml-[90px] font-bold'>Events</h3>
+        <div className='flex flex-col'><h3 className='lg:text-4xl text-5xl md:ml-[90px] ml-[30px] font-serif text-[#ff009b]'>
+  Events</h3>
+  
+</div>
         <div><Cards limit={4}/></div>
       </div>
       <div><Footer/></div>

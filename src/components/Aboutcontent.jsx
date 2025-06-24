@@ -11,13 +11,14 @@ import img9 from '../assets/std5.jpg'
 
 const Aboutcontent = () => {
   return (
-    <div className='lg:mt-[120px] mt-[50px] px-6  md:px-20'>
+    <div className='lg:mt-[70px] mt-[50px] px-6  md:px-20'>
       <div>
-        <h3 className='lg:text-4xl text-4xl text-center font-bold text-white mb-8'>
-          Conducting  Tech Explore
-        </h3>
+      <div className='flex flex-col'><h3 className='lg:text-4xl text-4xl text-center font-serif text-[#ff009b]'>
+  Conducting Tech Explore</h3>
+  <div className='flex justify-center mt-[15px]'><span className='border-[1px]   border-[#ff009b] w-[300px] '></span></div>
+</div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:pt-[30px] pt-[10px] gap-6  '>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:pt-[30px] pt-[30px] gap-6  '>
           <img src={img} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
           <img src={img2} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
           <img src={img3} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />

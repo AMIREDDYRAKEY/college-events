@@ -43,7 +43,10 @@ const contacts = [
 const ContactInfo = () => {
     return (
         <div className="mt-[50px] lg:pt-[70px] pt-[60px]">
-            <h3 className="text-4xl text-center font-bold text-[#f183e3]">Contact Us</h3>
+            <div className='flex flex-col'><h3 className='lg:text-4xl text-4xl text-center font-serif text-[#ff009b]'>
+  Contact Us</h3>
+  <div className='flex justify-center mt-[15px]'><span className='border-[1px]   border-[#ff009b] w-[150px] '></span></div>
+</div>
             <div className="px-[0px] flex flex-wrap gap-4 justify-around">
                 {contacts.map((info, index) => (
                     <div className="flex gap-8 items-center lg:ml-[40px]  mt-[30px]">
@@ -54,7 +57,7 @@ const ContactInfo = () => {
                                 className="lg:h-[200px] lg:w-[200px] h-[120px] w-[120px] shadow-lg border-[1px] border-purple-800 rounded-full object-cover z-"
                             />
                         </div>
-                        <div className="flex flex-col gap-2 lg:text-md text-[10px] bg-[#281563]  shadow-md shadow-[#443869]  lg:h-[150px] h-[100px] lg:mt-[15px] mt-[0] ml-[-80px] justify-center  items-center lg:w-[280px] w-[200px]  rounded-r-full text-white">
+                        <div className="flex flex-col gap-2 lg:text-[15px] text-[10px] bg-[#281563]  shadow-md shadow-[#443869]  lg:h-[150px] h-[100px] lg:mt-[15px] mt-[0] ml-[-70px] justify-center  items-center lg:w-[280px] w-[200px]  rounded-r-full text-white">
                             <p > <strong >Name:</strong> {info.Name}</p>
                             <p> <strong >Roll No:</strong> {info.RollNo}</p>
                             <p> <strong >Section:</strong> {info.Section}</p>
