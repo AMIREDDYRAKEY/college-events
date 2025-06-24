@@ -14,11 +14,11 @@ const HomeIntro = () => {
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 2000, // 2.5 seconds
-          disableOnInteraction: false, // keep autoplay after user interaction
+          delay: 2000,  
+          disableOnInteraction: false,  
         }}
-        loop={true} // optional: makes it loop infinitely
-        className="mySwiper lg:w-full lg:h-full  rounded-xl  "
+        loop={true}  
+        className="mySwiper lg:w-full lg:h-full  rounded-md  "
       >
         <SwiperSlide className="flex w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[480px] items-center justify-center  text-white text-2xl font-semibold">
           <div><img src={img} alt="" className='w-full h-full object-cover object-center' /></div>

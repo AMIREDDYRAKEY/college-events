@@ -6,6 +6,10 @@ import img from '../assets/aitslogo.png'
 const Nav = () => {
   const navigate = useNavigate();
   const [sidenav,setsidenav]=useState('');
+  const [aboutactive, setaboutactive] = useState(false);
+  const [eventsactive,seteventsactive]=useState(false)
+  const [Cactive,setCactive]=useState(false)
+  const [Contactactive,setContactactive]=useState('/Contact')
   const opensidenav =()=>{
     setsidenav(true)
   }
@@ -20,33 +24,30 @@ const Nav = () => {
         </div>
            
         <div className='lg:flex gap-8 text-pink-100 hidden font-semibold md:ml-[-100px]  text-sm'>
-          <button
-            onClick={() => navigate('/')}
-            className='hover:text-[#ff009b] transition duration-200'
-          >
+          <button onClick={() => navigate('/')}>
             Home
           </button>
           <button
-            onClick={() => navigate('/About')}
-            className='hover:text-[#ff009b] transition duration-200'
+            onClick={() => {navigate('/About');setaboutactive(true)}}
+            className={` ${aboutactive ? 'text-[#ff009b]':'text-white'} ` }
           >
             About
           </button>
           <button
-            onClick={() => navigate('/Events')}
-            className='hover:text-[#ff009b] transition duration-200'
+            onClick={() =>{ navigate('/Events');seteventsactive(true)}}
+            className={` ${eventsactive ? 'text-[#ff009b]':'text-white'} ` }
           >
             Events
           </button>
           <button
-            onClick={() => navigate('/Coordinators')}
-            className='hover:text-[#ff009b] transition duration-200'
+            onClick={() => {navigate('/Coordinators');setCactive(true)}}
+            className={` ${Cactive ? 'text-[#ff009b]':'text-white'} ` }
           >
             Coordinators
           </button>
           <button
-            onClick={() => navigate('/Contact')}
-            className='hover:text-[#ff009b] transition duration-200'
+            onClick={() => {navigate('/Contact');setContactactive(true)}}
+            className={` ${Contactactive === '/Contact' ? 'text-white ':'text-[#ff009b]'} ` }
           >
             Contact
           </button>

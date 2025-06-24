@@ -102,7 +102,7 @@ const Cards = ({ limit }) => {
         </div>
       ))}
 
-      {/* Register Modal */}
+      {/* Register  */}
       {isopen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70  z-[100] ">
           <div className="rounded-lg p-6 relative z-50 w-[90%] max-w-md">
@@ -111,7 +111,7 @@ const Cards = ({ limit }) => {
         </div>
       )}
 
-      {/* View Details Modal */}
+      {/* View Details  */}
       {details && selectedEvent && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[100]">
           <div className="rounded-lg p-6 relative z-[100px] w-[90%] max-w-md">

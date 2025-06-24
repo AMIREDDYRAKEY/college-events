@@ -7,23 +7,55 @@ const Coordinators = () => {
     { Sno: '1', 
       Name: 'A. Sudhakar Reddy', 
       EventName: 'EventName',
-       Role: 'Principal' },
+       Role: 'Principal'
+       },
     { Sno: '2', 
       Name: 'Dr. C Venkata Subbaiah', 
-      EventName: 'EventName', Role: 'HOD' },
-    { Sno: '3', Name: 'S.M.D Ali', 
-      EventName: 'EventName', Role: 'Professor' },
+      EventName: 'EventName', 
+      Role: 'HOD' 
+    },
+    { Sno: '3', 
+      Name: 'S.M.D Ali', 
+      EventName: 'EventName', 
+      Role: 'Professor'
+     },
     { Sno: '4', Name: 'Faculty Name',
-       EventName: 'EventName', Role: 'Professor' },
-    { Sno: '5', Name: 'Faculty Name', EventName: 'EventName', Role: 'About' },
+       EventName: 'EventName', 
+       Role: 'Professor' 
+      },
+    { Sno: '5',
+       Name: 'Faculty Name', 
+      EventName: 'EventName', 
+      Role: 'About' 
+    },
   ];
 
   const studentcordinators = [
-    { Sno: '1', StudentName: 'Y.Pradeep', Year: 'III-C', Posisition: 'President' },
-    { Sno: '2', StudentName: 'G.Venkata Tharun', Year: 'II-A', Posisition: 'Scretary' },
-    { Sno: '3', StudentName: 'K.Vijay Kumar', Year: 'III-A', Posisition: 'Vice President' },
-    { Sno: '4', StudentName: 'K.Venkata Pavan', Year: 'III-C', Posisition: 'Treasure' },
-    { Sno: '5', StudentName: 'K.Mythili', Year: 'III-B', Posisition: 'Treasure' },
+    { Sno: '1', 
+      StudentName: 'Y.Pradeep',
+       Year: 'III-C',
+        Posisition: 'President'
+       },
+    { Sno: '2', 
+      StudentName: 'G.Venkata Tharun',
+        Year: 'II-A',
+       Posisition: 'Scretary'
+       },
+    { Sno: '3', 
+      StudentName: 'K.Vijay Kumar', 
+      Year: 'III-A', 
+      Posisition: 'Vice President' 
+    },
+    { Sno: '4', 
+      StudentName: 'K.Venkata Pavan', 
+      Year: 'III-C', 
+      Posisition: 'Treasure'
+     },
+    { Sno: '5', 
+      StudentName: 'K.Mythili', 
+      Year: 'III-B', 
+      Posisition: 'Treasure' 
+    },
   ];
 
   return (

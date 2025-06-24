@@ -17,16 +17,16 @@ const Aboutcontent = () => {
           Conducting  Tech Explore
         </h3>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:pt-[30px] pt-[10px] gap-6'>
-          <img src={img} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img2} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img3} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img4} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img5} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img6} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img7} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img8} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
-          <img src={img9} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px]' />
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:pt-[30px] pt-[10px] gap-6  '>
+          <img src={img} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img2} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img3} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img4} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img5} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img6} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img7} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img8} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
+          <img src={img9} alt=" " className='rounded-lg shadow-lg object-cover w-full h-[250px] hover:scale-105 transistion-transform duration-300' />
         </div>
       </div>
     </div>
