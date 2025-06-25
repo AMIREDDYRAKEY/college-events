@@ -15,7 +15,7 @@ const Nav = () => {
   }
 
   return (
-<div className="w-full  h-[80px] fixed top-0 z-[40] rounded-lg shadow-md shadow-[#1d1d3a] bg-[#0d0d4e] ">
+<div className="w-full  h-[80px] fixed top-0 z-[40]  shadow-md shadow-[#1d1d3a] bg-[#0f0f38] ">
 
       <div className='flex justify-between items-center h-full px-10 lg:px-[100px]'>
         <div className='flex '>
