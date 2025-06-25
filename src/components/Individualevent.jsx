@@ -20,7 +20,7 @@ const Individualevent = ({ details, setdetails, event }) => {
 
   return (
     <div className="flex flex-col lg:justify-center  z-[100px] lg:items-center">
-      <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px] md:h-[250px] bg-gradient-to-r from-blue-900 via-blue-900 to-indigo-900  rounded-lg shadow-md text-white ">
+      <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px] md:h-[250px] bg-[#1e3142]  rounded-lg shadow-md text-white ">
         {/* Image */}
         <div>
           <img
@@ -35,25 +35,25 @@ const Individualevent = ({ details, setdetails, event }) => {
           <div className="lg:flex lg:flex-row grid grid-cols-2 lg:gap-3 gap-3">
             <button
               onClick={() => setactivetab('schedule')}
-              className="h-[30px] lg:w-[80px] bg-gradient-to-r from-red-600 via-red-600 to-red-600 text-white font-semibold rounded-md"
+              className="h-[30px] lg:w-[80px] bg-[#55e6a5] text-black  rounded-md"
             >
               Schedule
             </button>
             <button
               onClick={() => setactivetab('rules')}
-              className="h-[30px] lg:w-[80px] bg-gradient-to-r from-red-600 via-red-600 to-red-600 text-white font-semibold rounded-md"
+              className="h-[30px] lg:w-[80px] bg-[#55e6a5] text-black  rounded-md"
             >
               Rules
             </button>
             <button 
-              className="h-[30px] lg:w-[80px] bg-gradient-to-r from-red-600 via-red-600 to-red-600 text-white font-semibold rounded-md"
+              className="h-[30px] lg:w-[80px] bg-[#55e6a5] text-black  rounded-md"
               onClick={() => setactivetab('results')}
             >
               Results
             </button>
             <div className='ml-[85px] md:ml-[50px] lg:mt-[-30px] mt-[-240px]'>
               <button
-                className="text-2xl mt-[-15px] lg:mt-[-0px] text-white font-bold"
+                className="text-2xl mt-[-15px] lg:mt-[-0px] text-[#60819f] font-bold"
                 onClick={() => setdetails(!details)}
               >
                 <IoCloseSharp />
@@ -64,16 +64,16 @@ const Individualevent = ({ details, setdetails, event }) => {
           {/* Schedule Section */}
           {activetab === 'schedule' && (
             <div className="flex flex-col gap-2 mt-2 text-sm">
-              <div className="flex gap-2 text-gray-300 ">
+              <div className="flex gap-2 text-white ">
                 <strong>Event:</strong> <p>{event.EventName}</p>
               </div>
-              <div className="flex gap-2 text-gray-300 ">
+              <div className="flex gap-2 text-white ">
                 <strong>Date:</strong> <p>{event.Date}</p>
               </div>
-              <div className="flex gap-2 text-gray-300 ">
+              <div className="flex gap-2 text-white ">
                 <strong>Time:</strong> <p>{event.time}</p>
               </div>
-              <div className="flex gap-2 text-gray-300 ">
+              <div className="flex gap-2 text-white ">
                 <strong>Venue:</strong> <p>{event.venue}</p>
               </div>
               
@@ -82,17 +82,17 @@ const Individualevent = ({ details, setdetails, event }) => {
 
           {/* Rules Section */}
           {activetab === 'rules' && (
-            <div className="flex flex-col gap-2 mt-2 text-sm text-gray-300 ">
+            <div className="flex flex-col gap-2 mt-2 text-sm text-white ">
               {rulesdata.map((info, index) => (
-                <div key={index} className="flex flex-col gap-2 text-gray-300 ">
+                <div key={index} className="flex flex-col gap-2 text-white ">
                   <div className="flex gap-2">
-                    <p className='text-md font-semibold text-gray-300 '>1: {info.rule1}</p>
+                    <p className='text-md font-semibold text-white '>1: {info.rule1}</p>
                   </div>
                   <div className="flex gap-2">
-                    <p className='text-md font-semibold text-gray-300 '>2: {info.rule2}</p>
+                    <p className='text-md font-semibold text-white '>2: {info.rule2}</p>
                   </div>
                   <div className="flex gap-2">
-                    <p className='text-md font-semibold text-gray-300 '>3: {info.rule3}</p>
+                    <p className='text-md font-semibold text-white '>3: {info.rule3}</p>
                   </div>
                 </div>
               ))}
@@ -101,7 +101,7 @@ const Individualevent = ({ details, setdetails, event }) => {
 
           {/* Results Section */}
           {activetab === 'results' && (
-            <div className="flex flex-col gap-2 mt-2 text-sm p-1 text-gray-300 ">
+            <div className="flex flex-col gap-2 mt-2 text-sm p-1 text-white ">
               {results.map((info, index) => (
                 <div key={index}>
                   <p className='text-lg mt-[10px] font-semibold'>{info.result}</p>
