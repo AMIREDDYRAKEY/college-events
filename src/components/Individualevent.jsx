@@ -20,7 +20,7 @@ const Individualevent = ({ details, setdetails, event }) => {
 
   return (
     <div className="flex flex-col lg:justify-center  z-[100px] lg:items-center">
-      <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px] md:h-[250px] bg-[#17173a]  rounded-lg shadow-md text-white ">
+      <div className="lg:flex lg:flex-row flex flex-col gap-6 px-6 py-4 lg:w-[600px] md:h-[250px] bg-gradient-to-r from-blue-900 via-blue-900 to-indigo-900  rounded-lg shadow-md text-white ">
         {/* Image */}
         <div>
           <img
@@ -35,18 +35,18 @@ const Individualevent = ({ details, setdetails, event }) => {
           <div className="lg:flex lg:flex-row grid grid-cols-2 lg:gap-3 gap-3">
             <button
               onClick={() => setactivetab('schedule')}
-              className="h-[30px] lg:w-[80px] bg-[#551caa] text-[#b599e2] font-thin rounded-md"
+              className="h-[30px] lg:w-[80px] bg-gradient-to-r from-red-600 via-red-600 to-red-600 text-white font-semibold rounded-md"
             >
               Schedule
             </button>
             <button
               onClick={() => setactivetab('rules')}
-              className="h-[30px] lg:w-[80px] bg-[#551caa] text-[#b599e2] font-thin rounded-md"
+              className="h-[30px] lg:w-[80px] bg-gradient-to-r from-red-600 via-red-600 to-red-600 text-white font-semibold rounded-md"
             >
               Rules
             </button>
             <button 
-              className="h-[30px] lg:w-[80px] bg-[#551caa] text-[#b599e2] font-thin rounded-md"
+              className="h-[30px] lg:w-[80px] bg-gradient-to-r from-red-600 via-red-600 to-red-600 text-white font-semibold rounded-md"
               onClick={() => setactivetab('results')}
             >
               Results
