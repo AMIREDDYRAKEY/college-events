@@ -37,7 +37,7 @@ useEffect(()=>{
         {/* Image */}
         <div>
           <img
-            src={event.img}
+            src={event.image}
             alt={event.EventName}
             className="lg:max-w-[180px] w-[300px] h-[150px] md:h-[200px] lg:mt-2 mt-[20px] object-cover rounded-md"
           />
