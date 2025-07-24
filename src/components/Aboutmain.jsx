@@ -8,10 +8,13 @@ const Aboutmain = () => {
         <div >
             <div className='flex flex-col items-center justify-center lg:pt-[120px] pt-[100px] px-[20px]'>
                 {/* About  */}
-                <h2 className='text-4xl font-bold text-center mb-6 text-[#f033d7]'>About </h2>
+                <div className='flex flex-col'><h3 className='lg:text-4xl text-5xl text-center font-serif text-[#ff009b]'>
+About</h3>
+  <div className='flex justify-center mt-[1px]'><span className='border-[1px]   border-[#ff009b] md:w-[130px] w-[160px] '></span></div>
+</div>
 
                 {/* Image */}
-                <div className='w-full flex justify-center'>
+                <div className='w-full flex justify-center mt-[30px]'>
                     <img
                         src={img}
                         alt="About AITS"

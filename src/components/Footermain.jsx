@@ -11,8 +11,8 @@ const Footer = () => {
           <h3 className="text-xl lg:text-2xl font-bold">Tech Explore 2024</h3>
           <p className="text-gray-300 font-semibold hover:text-[#ff009b]">Department of Computer Science & Engineering</p>
           <p className="text-gray-300 font-semibold hover:text-[#ff009b]">AITS, Kadapa</p>
-          <p className="text-gray-300 font-semibold hover:text-[#ff009b]">March 15, 2024</p>
-          <p className="text-gray-300 font-semibold hover:text-[#ff009b]">CSE Block, Seminar Hall & Labs</p>
+          <p className="text-gray-300 font-semibold hover:text-[#ff009b]">Jan 15, 2024</p>
+          <p className="text-gray-300 font-semibold hover:text-[#ff009b]">CSE-E Block & Labs</p>
         </div>
 
         {/* Colleges Section */}

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoCloseSharp } from "react-icons/io5";
+import { getdata } from '../../api/api';
 
-const Individualevent = ({ details, setdetails, event }) => {
+const Individualevent =  ({ details, setdetails, event }) => {
   const [activetab, setactivetab] = useState('schedule');
-
   const rulesdata = [
     {
       rule1: 'Open to all registered students.',
@@ -11,7 +11,20 @@ const Individualevent = ({ details, setdetails, event }) => {
       rule3: 'The judges decision will be final and binding.'
     },
   ];
-
+const individualdata = async ()=>{  
+  try{
+  const [data,setdata] =useState([])
+  const viewres=await getdata();
+  setdata(viewres.data)
+  }
+  catch(err){
+    console.log("error",err)
+  }
+  
+}
+useEffect(()=>{
+  individualdata();
+},[])
   const results = [
     {
       result: 'Results Declared Soon'
@@ -65,10 +78,10 @@ const Individualevent = ({ details, setdetails, event }) => {
           {activetab === 'schedule' && (
             <div className="flex flex-col gap-2 mt-2 text-sm">
               <div className="flex gap-2 text-white ">
-                <strong>Event:</strong> <p>{event.EventName}</p>
+                <strong>Event:</strong> <p>{event.eventName}</p>
               </div>
               <div className="flex gap-2 text-white ">
-                <strong>Date:</strong> <p>{event.Date}</p>
+                <strong>Date:</strong> <p>{event.date}</p>
               </div>
               <div className="flex gap-2 text-white ">
                 <strong>Time:</strong> <p>{event.time}</p>

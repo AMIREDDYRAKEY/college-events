@@ -1,26 +1,28 @@
 import React, { useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import Home from '../pages/Home';
+import { Navigate, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const Userlogin = () => {
   const [sub, setsub] = useState('')
   const [open,setopen]=useState('')
-  const [username,setusername]=useState('')
+  const [email,setemail]=useState('')
   const [password ,setpassword]=useState('')
-  const [Idno,setIdno]=useState('')
   const [errors,seterrors]=useState({
-    username:'',
+    email:'',
     password:'',
-   Idno:''
   });
-  const handlesubmit =(e)=>{
+  const navigate=useNavigate('')
+  const handlesubmit = async(e)=>{
     e.preventDefault();
     let isValid=true
-    if(username.trim()===""){
-      seterrors((errors) =>({...errors,username:'Required Username'}) )
+    if(email.trim()===""){
+      seterrors((errors) =>({...errors,email:'Required email'}) )
       isValid=false
     }
     else{
-      seterrors((errors) =>({...errors,username:''}) )
+      seterrors((errors) =>({...errors,email:''}) )
     }
     // Passowrd
     if(password.trim()===""){
@@ -33,25 +35,30 @@ const Userlogin = () => {
     else{
       seterrors((errors)=>({...errors,password:''}))
     }
-    // Idno
-    if(Idno.trim()===""){
-      seterrors((errors)=>({...errors,Idno:'Id No is Required'}))
+     const api = axios.create({ baseURL: 'https://evebackend.onrender.com' });
+    try {
+
+      const res = await api.post('/api/auth/login',{
+        email,password
+      });
+      setdata(res.data)
+     
+      if (res.data.token) {
+        localStorage.setItem("token", res.data.token)
+       
+      }
+        
     }
-    else{
-      seterrors((errors)=>({...errors,Idno:''}))
+    catch (err) {
+      console.log("error", err)
     }
-    if(isValid){
-      setopen(true)
-      setusername('')
-      setpassword('')
-      setConfirmpassowrd('')
-    }
-    else{
-      setopen(false)
-    }
+    alert('Login sucessfull')
+    navigate('/')
   }
   const submit = () => {
+    e.preventDefault()
     setsub(true)
+       
   }
   return (
     <div>
@@ -68,15 +75,13 @@ const Userlogin = () => {
               <h3 className="text-4xl text-white font-semibold uppercase mt-[10px]">Login </h3>
 
               <div className="flex flex-col gap-3 mt-[-10px] items-center justify-center">
-                <span className='flex flex-col  '> <input type="text" placeholder="Username" value={username} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setusername(e.target.value)} />
-                {errors.username && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.username}</span>}
+                <span className='flex flex-col  '> <input type="text" placeholder="email" value={email} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setemail(e.target.value)} />
+                {errors.email && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.email}</span>}
               </span>
                <span className='flex flex-col'> <input type="Password" placeholder="Password" value={password} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setpassword(e.target.value)} />
                 {errors.password && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.password}</span>}
               </span>
-                 <span className='flex flex-col'> <input type="Password" placeholder="Id No" value={Idno} className="w-[250px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" onChange={(e) => setIdno(e.target.value)} />
-                {errors.Idno && <span className='text-red-600 ml-[15px] mt-[5px]'>{errors.Idno}</span>}
-              </span>
+                  
               </div>
               <div className="mt-[-6px] flex flex-col gap-2 items-center justify-center">
                 <button className="h-[40px] w-[250px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>

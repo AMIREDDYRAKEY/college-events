@@ -1,40 +1,38 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+import Home from '../pages/Home';
+import About from '../pages/About';
 const Register = ({ isopen, setisopen }) => {
-    const [sub, setsub] = useState('')
-    const [Name, setName] = useState('')
-    const [Idno, setIdno] = useState('')
-    const [Section,setSection]=useState('')
-    const [errors, seterrors] = useState({
-        Name: '',
-        Idno: ''
-    })
-    const handlesubmit = () => {
-        let isvalid = true
-        if (Name === '') {
-            seterrors((errors) => ({ ...errors, Name: 'Name is required' }))
+    const[submit,setsubmit] =useState('')
+    const [data, setdata] = useState([])
+    const navigate=useNavigate()
+    const fetchdata = async () => {
+        const token = localStorage.getItem("token");
+        const api = axios.create({
+            baseURL: 'https://evebackend.onrender.com',
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+
+        try {
+            const res = await api.get('/api/auth/me');
+            setdata(res.data);
+        } catch (err) {
+            console.log('err', err);
         }
-        else {
-            seterrors((errors) => ({ ...errors, Name: '' }))
-        }
-        // Idno
-        if (Idno === '') {
-            seterrors((errors) => ({ ...errors, Idno: 'Idno is required' }))
-        }
-        else {
-            seterrors((errors) => ({ ...errors, Idno: '' }))
-        }
-        // section
-        if(Section === ''){
-            seterrors((errors) =>({...errors,Section:'Section is Required'}))
-        }
-        else{
-            seterrors((errors) =>({...errors,Section:''}))
-        }
-    }
-    const submit = () => {
-        setsub(true)
+    };
+
+    useEffect(() => {
+        fetchdata();
+    }, [])
+    const handlesubmit =()=>{
+        alert('Registered Sucessfully')
+        navigate('/')
+         
     }
     return (
         <div className='z-[100px]'>
@@ -42,7 +40,7 @@ const Register = ({ isopen, setisopen }) => {
                 <div className="flex items-center justify-center">
                     <div className="  md:w-[320px] w-[300px] mt-[12%] rounded-lg shadow-lg p-4 shadow-[#4b3c63] bg-[#34244c]">
                         <div className='flex flex-row-reverse justify-center '>
-                            <h3 className='text-3xl text-center font-semibold '>Register</h3>
+                            <h3 className='text-2xl text-center font-semibold '>Register </h3>
                             <button
                                 className="absolute  md:ml-[290px] ml-[270px] mt-[-15px] text-white font-bold text-2xl"
                                 onClick={() => setisopen(!isopen)}
@@ -52,37 +50,15 @@ const Register = ({ isopen, setisopen }) => {
 
                             </button>
                         </div>
-                        <div className="flex flex-col gap-7 items-center justify-center ">
-                            <div className="flex flex-col gap-3 items-center justify-center mt-[20px]">
-                                {/* Username */}
-                                <div className='flex flex-col'>
-                                    <input type="text" placeholder="Enter Your Name" className="w-[270px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Name} onChange={(e) => setName(e.target.value)} />
-                                     <span className='text-red-600 font-semibold ml-[10px]'>{errors.Name}</span>
-                                </div>
-                                {/* Idno */}
-                                <div className='flex flex-col'>
-                                    <input type="text" placeholder="Id No" className="w-[270px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Idno} onChange={(e) => setIdno(e.target.value)} />
-                                    <span className='text-red-600 font-semibold ml-[10px]'>{errors.Idno}</span>
-                                </div>
-                                {/* section */}
-                                 <div className='flex flex-col'>
-                                    <input type="text" placeholder="Section" className="w-[270px] px-3 rounded-xl py-[7px] bg-[#34244c] border-[1px] text-gray-400" value={Section} onChange={(e) => setSection(e.target.value)} />
-                                    <span className='text-red-600 font-semibold ml-[10px]'>{errors.Section}</span>
-                                </div>
-                            </div>
-                            <div className="mt-[-10px] flex flex-col gap-2 items-center justify-center">
-                                <button className="h-[40px] w-[270px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handlesubmit}>Submit</button>
-                                {
-                                    sub && (
-                                        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                    bg-green-600 text-white px-8 py-8 rounded-xl shadow-lg z-50">
-                                            <p className="text-lg font-semibold">Registered successfully</p>
-                                        </div>
-                                    )
-                                }
-
-                            </div>
+                        <div className="flex flex-col gap-2  pt-[20px] text-white text-sm">
+                            <div className='ml-[20px] flex gap-2'><span className="font-semibold text-gray-300  text-center">Name:</span> <p className='text-gray-300'>{data.username}</p></div>
+                            <div className='ml-[20px] flex gap-2'><span className="font-semibold text-gray-300  text-center">Email:</span> <p className='text-gray-300'>{data.email} </p></div>
+                            <div className='ml-[20px] flex gap-2'><span className="font-semibold text-gray-300  text-center">ID No:</span> <p className='text-gray-300'>{data.idNo} </p></div>
+                            <div className='ml-[20px] flex gap-2'><span className="font-semibold text-gray-300  text-center">Branch:</span> <p className='text-gray-300'>{data.branch} </p></div>
+                            <div className='ml-[20px] flex gap-2'><span className="font-semibold text-gray-300  text-center">Section:</span> <p className='text-gray-300'>{data.section} </p></div>
+                            <div className='ml-[20px] flex gap-2'><span className="font-semibold text-gray-300  text-center">Year:</span> <p className='text-gray-300'>{data.year} </p></div>
                         </div>
+                        <div className='pt-[20px] flex justify-end'><button className='px-4 py-1 rounded-lg bg-[#2b2bb1]' onClick={handlesubmit}>Confirm</button></div>
                     </div>
                 </div>
             </div>

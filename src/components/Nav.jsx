@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { FiMenu } from "react-icons/fi";
 import Sidenav from './Sidenav';
+import { FaUserCircle } from "react-icons/fa";
 import img from '../assets/aitslogo.png'
+import Signup from '../pages/Signup'
+ 
 const Nav = () => {
   const navigate = useNavigate();
   const [sidenav,setsidenav]=useState('');
@@ -10,6 +13,25 @@ const Nav = () => {
   const [eventsactive,seteventsactive]=useState('/Events')
   const [Cactive,setCactive]=useState('/Coordinators')
   const [Contactactive,setContactactive]=useState('/Contact')
+  const[login,setislogin]=useState('')
+  const [logout,setlogout]=useState('')
+    useEffect(() => {
+    const token = localStorage.getItem("token");
+    setislogin(!!token); 
+  }, []);
+ 
+  const handlelogin=()=>{
+    navigate('/Signup')
+    
+  }
+
+  const handlelogout =()=>{
+    localStorage.removeItem("token")
+    setlogout(false)
+    setislogin(false)
+    navigate('/')
+  }
+ 
   const opensidenav =()=>{
     setsidenav(true)
   }
@@ -52,13 +74,19 @@ const Nav = () => {
             Contact
           </button>
         </div>
-        <div>
-          <button
-            className='text-white font-semibold bg-pink-500 hover:bg-pink-800 px-4 py-1 rounded-md text-sm transition duration-200'
-            onClick={() => navigate('/Login')}
-          >
-            Login
-          </button>
+         <div>
+          {!login ? (
+            <button
+              className='text-white font-semibold bg-pink-500 hover:bg-pink-800 px-4 py-1 rounded-md text-sm transition duration-200'
+              onClick={handlelogin}
+            >
+              Login
+            </button>
+          ) : (
+            <button onClick={()=>setlogout(!logout)}  className='text-white text-3xl'>
+              <FaUserCircle />
+            </button>
+          )}
         </div>
          <div className='lg:hidden flex text-3xl'><button onClick={()=>setsidenav(!sidenav)} ><FiMenu /></button>
          {
@@ -68,8 +96,18 @@ const Nav = () => {
               </div>
           )
          }
+         
          </div>
+        
+          
       </div>
+      <div className='flex justify-end mr-[100px]'>
+       {
+          logout && (
+            <button onClick={handlelogout} className='bg-blue-200 px-2 py-2 text-black font-bold rounded-md'>Logout</button>
+          )
+         }
+         </div>
     </div>
   );
 };
