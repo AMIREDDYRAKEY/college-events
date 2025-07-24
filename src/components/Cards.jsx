@@ -63,7 +63,7 @@ const Cards = ({ limit }) => {
             <img src={profiles.image} alt={profiles.EventName} className='h-[230px] lg:w-[290px] w-[300px] rounded-lg' />
             <div className='flex flex-col px-4 mt-[15px] gap-1'>
               <h1 className='text-xl text-white font-bold'>{profiles.eventName}</h1>
-              <p className='text-gray-300 text-lg font-semibold'>{profiles.Category}</p>
+              <p className='text-gray-300 text-lg font-semibold'>{profiles.category}</p>
               <h3 className='text-gray-300 text-sm font-semibold'>{profiles.date}</h3>
             </div>
 
