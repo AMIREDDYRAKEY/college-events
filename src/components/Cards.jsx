@@ -22,55 +22,30 @@ const Cards = ({ limit }) => {
     datagets();
   },[])
  
-  // const EventProfiles = [
-  //   {
-  //     img: img,
-  //     EventName: 'Paper Presentation',
-  //     Under: 'Tech Explore 2024',
-  //     Date: '24/02/2025',
-  //     // desc: "Paper Presentation is an opportunity for students to showcase their research and innovative ideas. Participants will present their technical papers on emerging technologies, current trends, and innovative solutions to real-world problems.",
-  //     time: "10:00 AM - 12:00 PM",
-  //     venue: "CSE-E Class Room"
-  //   },
-  //   {
-  //     img: img2,
-  //     EventName: 'Bug Hunting',
-  //     Under: 'Tech Explore 2024',
-  //     Date: '07/01/2025',
-  //     // desc: "Bug Hunting is a thrilling competition designed for coders and developers who love debugging and problem-solving. Participants will be given pre-written code snippets embedded with logical or syntactical bugs. The task is to analyze, detect, and fix these issues within a set timeframe",
-  //     time: "10:00 AM - 12:00 PM",
-  //     venue: "CSE-E Class Room"
-  //   },
-  //   {
-  //     img: img3,
-  //     EventName: 'Brain Busters',
-  //     Under: 'Tech Explore 2024',
-  //     Date: '23/12/24',
-  //     // desc: "Brain Busters is a high-intensity quiz-based competition that tests your knowledge, logic, and quick thinking. Designed to challenge even the sharpest minds, this event features multiple rounds that span across topics like science, tech, puzzles, general knowledge, and current affairs.",
-  //     time: "9:00 AM - 10:00 AM",
-  //     venue: "CSE E-Classroom"
-  //   },
-  //   {
-  //     img: img4,
-  //     EventName: 'Techno Jam',
-  //     Under: 'Tech Explore 2024',
-  //     Date: '14/02/25',
-  //     // desc: "Techno Jam is a thrilling on-the-spot speaking challenge where participants must speak fluently and confidently about random technical and general topics without hesitation or repetition. It's the ultimate test of presence of mind, communication skills, and tech vocabulary under pressure.",
-  //     time: "9:00 AM - 10:30 AM",
-  //     venue: "CSE-E Class Room"
-  //   },
-  //   {
-  //     img: img5,
-  //     EventName: 'Click Your Thoughts',
-  //     Under: 'Tech Explore 2024',
-  //     Date: '24/02/2025',
-  //     // desc: "Click Your Thoughts is a photography competition that challenges participants to capture the essence of technology and innovation through their lens. Showcase your perspective on how technology shapes our world.",
-  //     time: "2:00 PM - 4:00 PM",
-  //     venue: "CSE-E Class Room"
-  //   }
-  // ];
+  const EventProfiles = [
+    {
+      img: img,
+      
+    },
+    {
+      img: img2,
+      
+    },
+    {
+      img: img3,
+      
+    },
+    {
+      img: img4,
+      
+    },
+    {
+      img: img5,
+       
+    }
+  ];
 
-  // const displayedEvents = limit ? EventProfiles.slice(0, limit) : EventProfiles;
+  const displayedEvents = limit ? EventProfiles.slice(0, limit) : EventProfiles;
 
   const handleViewDetails = (event) => {
     setSelectedEvent(event);
