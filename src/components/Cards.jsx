@@ -24,23 +24,23 @@ const Cards = ({ limit }) => {
  
   const EventProfiles = [
     {
-      img: img,
+      image: img,
       
     },
     {
-      img: img2,
+      image: img2,
       
     },
     {
-      img: img3,
+      image: img3,
       
     },
     {
-      img: img4,
+      image: img4,
       
     },
     {
-      img: img5,
+      image: img5,
        
     }
   ];
@@ -60,7 +60,7 @@ const Cards = ({ limit }) => {
           className='lg:w-[280px] h-[400px] w-[300px]  bg-[#12122d] backdrop-blur-sm rounded-lg shadow-2xl  transition-transform hover:scale-105 relative'
         >
           <div className='flex flex-col'>
-            <img src={profiles.img} alt={profiles.EventName} className='h-[230px] lg:w-[290px] w-[300px] rounded-lg' />
+            <img src={profiles.image} alt={profiles.EventName} className='h-[230px] lg:w-[290px] w-[300px] rounded-lg' />
             <div className='flex flex-col px-4 mt-[15px] gap-1'>
               <h1 className='text-xl text-white font-bold'>{profiles.eventName}</h1>
               <p className='text-gray-300 text-lg font-semibold'>{profiles.under}</p>
