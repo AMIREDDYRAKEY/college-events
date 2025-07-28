@@ -90,22 +90,24 @@ const navigate = useNavigate();
         localStorage.setItem("token",res.data.token)
        
       }
-        navigate('/')
+      
     }
     catch (err) {
-      console.log("error", err)
+      alert("user already exists", err)
     }
-
+  navigate('/')
 
 
   };
-
+const handlelogin=()=>{
+  navigate('/Login')
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0b132b] via-[#2a1b3d] to-[#3a506b]">
       <div className="flex items-center justify-center">
         <div className="md:w-[330px] md:h-[540px] w-[300px] md:mt-[70px] mt-[90px] rounded-lg shadow-lg shadow-[#4b3c63] overflow-y-auto no-scrollbar bg-[#34244c]">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 pb-[20px] items-center justify-center ">
+          <form  className="flex flex-col gap-4 pb-[20px] items-center justify-center ">
             <h3 className="text-4xl text-white font-semibold uppercase mt-[20px]">Sign Up</h3>
             <div className="flex flex-col gap-4 items-center justify-center ">
               {/* Username */}
@@ -176,12 +178,12 @@ const navigate = useNavigate();
             </div>
 
             <div className="mt-[0px] flex flex-col gap-2 items-center justify-center">
-              <button type='submit' className="h-[40px] px-[100px] text-white font-bold rounded-xl bg-[#572bc7]"  >Submit</button>
+              <button type='submit' className="h-[40px] px-[100px] text-white font-bold rounded-xl bg-[#572bc7]" onClick={handleSubmit}  >Submit</button>
 
               <button className="text-sm text-white opacity-80 font-semibold">Already Have An Account?</button>
               <button
                 className="text-md text-blue-500 font-semibold"
-                onClick={() => navigate('/Login')}
+                onClick={handlelogin}
               >
 
                 Login

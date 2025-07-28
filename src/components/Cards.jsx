@@ -44,6 +44,10 @@ const Cards = ({ limit }) => {
        
     }
   ];
+  const handleregister=()=>{
+    setisopen(!isopen)
+    // localStorage.getItem("token")
+  }
 
   const displayedEvents = limit ? EventProfiles.slice(0, limit) : EventProfiles;
 
@@ -76,7 +80,7 @@ const Cards = ({ limit }) => {
               </button>
               <button
                 className='border border-[#7f46f0] h-[30px] w-[120px] bg-blue-700 rounded-lg'
-                onClick={() => setisopen(!isopen)}
+                onClick={handleregister}
               >
                 Register
               </button>

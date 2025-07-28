@@ -9,6 +9,7 @@ const Userlogin = () => {
   const [open,setopen]=useState('')
   const [email,setemail]=useState('')
   const [password ,setpassword]=useState('')
+  const [data,setdata]=useState('')
   const [errors,seterrors]=useState({
     email:'',
     password:'',
@@ -45,15 +46,15 @@ const Userlogin = () => {
      
       if (res.data.token) {
         localStorage.setItem("token", res.data.token)
-       
+       alert('Login sucessfull')
       }
         
+    navigate('/')
     }
     catch (err) {
-      console.log("error", err)
+      alert("Invalid Deatils", err)
     }
-    alert('Login sucessfull')
-    navigate('/')
+    
   }
   const submit = () => {
     e.preventDefault()
