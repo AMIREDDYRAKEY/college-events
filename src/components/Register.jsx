@@ -39,12 +39,12 @@ const Register = ({ isopen, setisopen }) => {
   const registeredId = localStorage.getItem("id");
 
   if (registeredId) {
- 
-    alert("Already registered");
+  localStorage.setItem("id", data.id);  
+    alert('Registered Successfully');
   } else {
    
-    localStorage.setItem("id", data._id);  
-    alert('Registered Successfully');
+    alert('Already Registered');
+    
   }
 
   navigate('/');
