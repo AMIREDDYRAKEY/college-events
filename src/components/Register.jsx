@@ -18,9 +18,9 @@ const Register = ({ isopen, setisopen }) => {
         }
         const api = axios.create({
             baseURL: 'https://evebackend.onrender.com',
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
         });
 
         try {
@@ -35,20 +35,25 @@ const Register = ({ isopen, setisopen }) => {
     useEffect(() => {
         fetchdata();
     }, [])
-   const handlesubmit = () => {
-  const registeredId = localStorage.getItem("id");
-
-  if (registeredId) {
-  localStorage.setItem("id", data.id);  
-    alert('Registered Successfully');
-  } else {
-   
-    alert('Already Registered');
-    
+ const handlesubmit = () => {
+  if (!data || !data.idNo) {
+    alert("User data not found. Please login again.");
+    navigate("/Signup");
+    return;
   }
 
-  navigate('/');
+  const storedId = localStorage.getItem("id");
+
+  if (storedId === data.idNo) {
+    alert("Already Registered");
+  } else {
+    localStorage.setItem("id", data.idNo);
+    alert("Registered Successfully");
+  }
+
+  navigate("/");
 };
+
 
     return (
         <div className='z-[100px]'>
