@@ -15,7 +15,7 @@ const Eventviewdetails = () => {
           headers: { Authorization: `Bearer ${token}` }
         });
 
-         
+
         const groupedEvents = res.data.reduce((acc, event) => {
           const dateKey = event.date?.split("T")[0] || "Unknown Date";
           if (!acc[dateKey]) acc[dateKey] = [];
@@ -60,9 +60,8 @@ const Eventviewdetails = () => {
           {Object.keys(data).map((day) => (
             <button
               key={day}
-              className={`h-[40px] w-[100px] rounded-md font-medium ${
-                activeDay === day ? "bg-purple-600 text-white" : "bg-gray-200 text-black"
-              }`}
+              className={`h-[40px] w-[100px] rounded-md font-medium ${activeDay === day ? "bg-purple-600 text-white" : "bg-gray-200 text-black"
+                }`}
               onClick={() => setActiveDay(day)}
             >
               {day}
@@ -86,14 +85,14 @@ const Eventviewdetails = () => {
                 <h2 className="lg:text-3xl text-xl text-black font-bold">
                   {event.eventName || event.title}
                 </h2>
-             <div className="w-[250px] flex gap-4 flex-col">
-  <p className="text-gray-700 text-[10px] break-words">
-    {event.description || event.desc}
-  </p>
-  <span className="text-purple-600 font-semibold text-md">
-    {event.time}
-  </span>
-</div>
+                <div className="w-[250px] flex gap-4 flex-col">
+                  <p className="text-gray-700 text-[10px] break-words">
+                    {event.description || event.desc}
+                  </p>
+                  <span className="text-purple-600 font-semibold text-md">
+                    {event.time}
+                  </span>
+                </div>
 
               </div>
             </div>
