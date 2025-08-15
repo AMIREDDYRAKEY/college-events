@@ -4,7 +4,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import { toast, ToastContainer } from 'react-toastify';
 const Userlogin = () => {
   const [sub, setsub] = useState('');
   const [open, setopen] = useState('');
@@ -54,6 +54,10 @@ const Userlogin = () => {
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
         setopen(true);  
+         toast.success("Login successful! Redirecting...", {
+        position: "top-right",
+        autoClose: 2000,
+      });
         setTimeout(() => {
           setopen(false);
           navigate('/');
@@ -61,6 +65,10 @@ const Userlogin = () => {
       }
     } catch (err) {
       alert("Invalid Details");
+      toast.error("Invalid email or password", {
+      position: "top-right",
+      autoClose: 3000,
+    });
     }
   };
 
@@ -123,24 +131,13 @@ const Userlogin = () => {
                 Submit
               </button>
 
-              {/* Success popup */}
-              {open && (
-                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                  bg-[#34244c] text-white px-8 py-[80px] rounded-xl shadow-lg z-50">
-                  <button
-                    className="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-xl"
-                    onClick={() => setopen(false)}
-                  >
-                    <IoCloseSharp />
-                  </button>
-                  <p className="lg:text-lg text-[10px] font-semibold">Login successfully</p>
-                </div>
-              )}
+              
             </div>
 
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
