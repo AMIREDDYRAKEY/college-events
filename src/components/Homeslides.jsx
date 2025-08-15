@@ -2,40 +2,38 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination,Autoplay } from 'swiper/modules';
-import "./style.css"
-import img from '../assets/std3.jpg'
-import img3 from '../assets/slide3.jpg'
-import img4 from '../assets/slide4.jpg'
-const HomeIntro = () => {
+import { Pagination, Autoplay } from 'swiper/modules';
+import './style.css';
+
+import img from '../assets/std3.jpg';
+import img3 from '../assets/slide3.jpg';
+import img4 from '../assets/slide4.jpg';
+
+const Homeslides = () => {
   return (
-<div className="relative z-[10] lg:w-[90%] lg:ml-[70px] ml-[10px] w-[90%] pt-[60px] h-[450px] lg:pt-[120px] lg:h-[580px]">
+    <div className="relative z-[10] w-[90%] lg:w-[90%] mx-auto pt-[60px] lg:pt-[120px] h-[450px] lg:h-[580px]">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 2000,  
-          disableOnInteraction: false,  
+          delay: 3000, // smoother autoplay
+          disableOnInteraction: false,
         }}
-        loop={true}  
-        className="mySwiper lg:w-full lg:h-full  rounded-md  "
+        loop={true}
+        className="mySwiper w-full h-full rounded-md overflow-hidden"
       >
-        <SwiperSlide className="flex w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[480px] items-center justify-center  text-white text-2xl font-semibold">
-          <div><img src={img} alt="" className='w-full h-full object-cover object-center' /></div>
-        </SwiperSlide>
-         <SwiperSlide className="flex w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[480px] items-center justify-center  text-white text-2xl font-semibold">
-          <div><img src={img4} alt=""  className='w-full h-full object-cover object-center'/></div>
-        </SwiperSlide>
-         <SwiperSlide className="flex w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[480px] items-center justify-center  text-white text-2xl font-semibold">
-          <div><img src={img3} alt=""  className='w-full h-full object-cover object-center'/></div>
-        </SwiperSlide>
-        <SwiperSlide className="flex w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[480px] items-center justify-center  text-white text-2xl font-semibold">
-          <div><img src={img4} alt=""  className='w-full h-full object-cover object-center' /></div>
-        </SwiperSlide>
+        {[img, img4, img3, img4].map((src, index) => (
+          <SwiperSlide key={index} className="flex items-center justify-center">
+            <img
+              src={src}
+              alt={`slide-${index}`}
+              className="w-full h-full object-cover object-center"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
 };
 
-
-export default HomeIntro;
+export default Homeslides;
